@@ -36,15 +36,17 @@ fi
 # need this as otherwise waf won't find the executables
 cd ../../../../
 
-for ftpLambda in 0.5 1.5 2.5 ; do
+for MaxCws in 9 ; do
 # Energy detection threshold for LAA
-    for energyDetection in -72.0 ; do
-        for cell in Wifi Laa ; do
-            # Make the simulation duration inversly proportional to ftpLambda
-            duration=$(echo "$base_duration/$ftpLambda" | bc)
-            simTag="eD_${energyDetection}_ftpLambda_${ftpLambda}_cellA_${cell}"
-            /usr/bin/time -f '%e %U %S %K %M %x %C' -o "${outputDir}"/time_stats -a \
-            ./waf --run laa-wifi-indoor --command="%s --cellConfigA=${cell} --cellConfigB=Wifi --lbtTxop=${lbtTxop} --logWifiRetries=1 --logWifiFailRetries=1 --logPhyArrivals=1 --logPhyNodeId=${logNodeId} --transport=${transport} --ftpLambda=${ftpLambda} --duration=${duration} --cwUpdateRule=nacks80 --logHarqFeedback=1 --logTxops=1 --logCwChanges=1 --logBackoffChanges=1 --laaEdThreshold=${energyDetection} --simTag=${simTag} --outputDir=${outputDir} --voiceEnabled=${voiceEnabled} --dropPackets=${dropPackets} --ns3::TcpSocket::SegmentSize=${tcpSegSize} --tcpRlcMode=${tcpRlcMode} --ns3::LteEnbRrc::DefaultTransmissionMode=${laaTxMode} --ns3::TcpSocket::InitialCwnd=${tcpInitialCw} --RngRun=${RngRun}"
+    for MinCws in 4 ; do
+    	for lbtTxop in 8 10 12 14 ; do 
+        	for cell in Wifi Laa ; do
+	            # Make the simulation duration inversly proportional to ftpLambda
+	            #duration=$(echo "$base_duration/$ftpLambda" | bc)
+	            simTag="eD_${energyDetection}_mincw${MinCws}_Maxcw${MaxCws}_lbtTxop${lbtTxop}_cellA${cellConfigA}"
+	            /usr/bin/time -f '%e %U %S %K %M %x %C' -o "${outputDir}"/time_stats -a \
+	            ./waf --run laa-wifi-indoor --command="%s --ns3::LbtAccessManager::MaxCw=${MaxCws} --ns3::LbtAccessManager::MinCw=${MinCws} --cellConfigA=${cell} --cellConfigB=Wifi --lbtTxop=${lbtTxop} --logWifiRetries=1 --logWifiFailRetries=1 --logPhyArrivals=1 --logPhyNodeId=${logNodeId} --transport=${transports} --duration=${duration} --cwUpdateRule=nacks80 --logHarqFeedback=1 --logTxops=1 --logCwChanges=1 --logBackoffChanges=1 --laaEdThreshold=${energyDetection} --simTag=${simTag} --outputDir=${outputDir} --voiceEnabled=${voiceEnabled} --dropPackets=${dropPackets} --ns3::TcpSocket::SegmentSize=${tcpSegSize} --tcpRlcMode=${tcpRlcMode} --ns3::LteEnbRrc::DefaultTransmissionMode=${laaTxMode} --RngRun=${RngRun}"
+	        done
         done
     done
 done
