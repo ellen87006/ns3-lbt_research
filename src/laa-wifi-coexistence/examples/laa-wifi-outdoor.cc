@@ -375,7 +375,6 @@ main (int argc, char *argv[])
       Vector macroCellCenter = lteHexGridEnbTopologyHelper->GetCellCenterPosition (macroCellId);
       Vector macroCellSite = lteHexGridEnbTopologyHelper->GetSitePosition (macroCellId);
       Ptr<Min2dDistancePositionAllocator> clusterMinDistPosAlloc = CreateObject<Min2dDistancePositionAllocator> ();
-      streamIndex += clusterMinDistPosAlloc->AssignStreams (streamIndex);
       Ptr<UniformHexagonPositionAllocator> clusterHexPositionAlloc = CreateObject<UniformHexagonPositionAllocator> ();
       streamIndex += clusterHexPositionAlloc->AssignStreams (streamIndex);
       clusterHexPositionAlloc->SetAttribute ("X", DoubleValue (macroCellCenter.x));
@@ -399,7 +398,6 @@ main (int argc, char *argv[])
       NodeContainer bsNodesClusterA;
       Ptr<Min2dDistancePositionAllocator> bsMinDistPosAllocA 
 	= CreateObject<Min2dDistancePositionAllocator> ();
-      streamIndex += bsMinDistPosAllocA->AssignStreams (streamIndex);
       bsMinDistPosAllocA->SetPositionAllocator (bsDiscPosAlloc);            
       mobility.SetPositionAllocator (bsMinDistPosAllocA);
       // BSs are placed one by one to guarantee min distance w.r.t. previous BSs
@@ -416,7 +414,6 @@ main (int argc, char *argv[])
       NodeContainer bsNodesClusterB;
       Ptr<Min2dDistancePositionAllocator> bsMinDistPosAllocB
 	= CreateObject<Min2dDistancePositionAllocator> ();
-      streamIndex += bsMinDistPosAllocB->AssignStreams (streamIndex);
       bsMinDistPosAllocB->SetPositionAllocator (bsDiscPosAlloc);            
       mobility.SetPositionAllocator (bsMinDistPosAllocB);
       // guarantee inter-operator distance
@@ -440,7 +437,6 @@ main (int argc, char *argv[])
       ueDiscPosAlloc->SetAttribute ("rho", DoubleValue (ueDroppingRadius));
       Ptr<Min2dDistancePositionAllocator> ueMinDistPosAlloc
 	= CreateObject<Min2dDistancePositionAllocator> ();
-      streamIndex += ueMinDistPosAlloc->AssignStreams (streamIndex);
       ueMinDistPosAlloc->SetPositionAllocator (ueDiscPosAlloc);                   
       mobility.SetPositionAllocator (ueMinDistPosAlloc);
 

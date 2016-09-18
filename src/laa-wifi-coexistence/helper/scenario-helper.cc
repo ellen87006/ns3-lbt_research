@@ -2099,10 +2099,18 @@ ConfigureWifiSta (NodeContainer ueNodes, struct PhyParams phyParams, Ptr<Spectru
       staDevices.Add (wifi.Install (spectrumPhy, mac, ueNodes.Get (i)));
     }
   BooleanValue booleanValue;
-  GlobalValue::GetValueByName ("pcapEnabled", booleanValue);
-  if (booleanValue.Get () == true)
+  bool found;
+  found = GlobalValue::GetValueByNameFailSafe ("pcapEnabled", booleanValue);
+  if (found && booleanValue.Get () == true)
     {
       spectrumPhy.EnablePcap ("laa-wifi-sta", staDevices);
+    }
+  found = GlobalValue::GetValueByNameFailSafe ("asciiEnabled", booleanValue);
+  if (found && booleanValue.Get () == true)
+    {
+      AsciiTraceHelper ascii;
+      std::string prefix = "laa-wifi-sta";
+      spectrumPhy.EnableAscii (prefix, staDevices);
     }
   return staDevices;
 }

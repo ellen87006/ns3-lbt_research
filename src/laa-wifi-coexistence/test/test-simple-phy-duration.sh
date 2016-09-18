@@ -73,9 +73,12 @@ failed_tests=()
 # We observe from node 3 which means we are blind to node 3's transmissions
 # (which amounts to 13 acks that we miss in this test)
 #
-# - Beacon is 114 data bytes, 39 symbols @ 6 Mb/s
-#   = 39* 4 us/symbol + 20 us PLCP preamble/header duration (16 + 4)  
-#   = 176 us each
+# - Beacon is 106 data bytes, and 24 bytes of MAC header, and 4 bytes FCS
+#   = 134 bytes at OFDM 6 Mb/s (MCS 0) where 24 uncoded bits/symbol
+#     according to Sec. 18.3.2.3, Table 18-4 of IEEE Std 802.11-2012
+#   = 134 bytes/3 bytes per symbol = 46 symbols @ 6 Mb/s beacon rate
+#   = 46* 4 us/symbol + 20 us PLCP preamble/header duration (16 + 4)  
+#   = 204 us each
 # - UDP frame 1028 data bytes IP, 1066 bytes at Wifi layer, which at
 #   HtMcs15 is 17 symbols * 4 us/symbols = 68 us
 #   = 68 + PLCP Preamble (16 us) + PLCP header (4 us)
@@ -90,15 +93,16 @@ failed_tests=()
 #
 # Total of 24 UDP data frames, 12 + 1 + 2 = 15 Acks, and ~200 beacons
 # 
-# All together, the above is about 35.2ms (Beacons), plus 2.8ms for data 
+# All together, the above is about 40.8ms (Beacons), plus 2.8ms for data 
 # (UDP plus ICMP), plus 0.4ms for acks, so we should see value of wifi 
-# channel occupancy of about 37ms < occupancy < 39ms
+# channel occupancy of around 44ms.  We will test around +/- 5% of the nominal
+# value of wifi channel occupancy, so about 41.8ms < occupancy < 46.2ms
 # 
 #################################################################
 
 label="10Kbps-Wifi"
-lower_bound=0.037
-upper_bound=0.039
+lower_bound=0.0418
+upper_bound=0.0462
 
 d1=10
 d2=10
@@ -146,20 +150,20 @@ cd ..
 # acks sent from observing node 3.
 # should see about 240 data frames, 120 acks, and 200 beacons total
 # From above:
-# - Beacon is 176 us each
+# - Beacon is 204 us each
 # - UDP frames are 108 us each
 # - Ack is 28 us each
 # 
-# All together, the above comes out to ~62ms.  We observe slightly
+# All together, the above comes out to ~70ms.  We observe slightly
 # less than this in practice (241 data frames), due to random start 
 # times for clients, so we'll test around +/- 5% of the nominal
-# value of wifi channel occupancy of about 59ms < occupancy < 65ms
+# value of wifi channel occupancy of about 66.5 < occupancy < 73.5ms
 # 
 #################################################################
 
 label="100Kbps-Wifi"
-lower_bound=0.059
-upper_bound=0.065
+lower_bound=0.0665
+upper_bound=0.0735
 
 d1=10
 d2=10
