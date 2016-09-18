@@ -1,13 +1,13 @@
-# project ns (3-dev) configured on Fri Sep 16 05:59:17 2016 by
+# project ns (3-dev) configured on Sun Sep 18 11:25:17 2016 by
 # waf 1.8.19 (abi 98, python 2070cf0 on linux2)
 # using ./waf configure -d optimized --enable-examples --enable-tests
 #
 ----------------------------------------
 Setting top to
-/home/sovietreborn/ns-3-lbt
+/home/sovietreborn/ns3-lbt_research
 ----------------------------------------
 Setting out to
-/home/sovietreborn/ns-3-lbt/build
+/home/sovietreborn/ns3-lbt_research/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
 find program=['gcc', 'cc'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
@@ -526,18 +526,18 @@ Checking for compilation flag -march=native support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_459ac415b3aca543ab673d412ca49b87/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_4f0cff940a1745d707adb0d05e7428c3/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_459ac415b3aca543ab673d412ca49b87/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_4f0cff940a1745d707adb0d05e7428c3/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_459ac415b3aca543ab673d412ca49b87/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_4f0cff940a1745d707adb0d05e7428c3/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_459ac415b3aca543ab673d412ca49b87/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_4f0cff940a1745d707adb0d05e7428c3/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
@@ -610,7 +610,7 @@ LDVERSION = ''
 python-config
 not found
 find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> None
-from /home/sovietreborn/ns-3-lbt/bindings/python: Could not find the program ['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config']
+from /home/sovietreborn/ns3-lbt_research/bindings/python: Could not find the program ['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config']
 
 
 # try again with -L$python_LIBDIR: ['/usr/lib']
@@ -625,27 +625,27 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e85f871ce7d9bb38b47d117724df00e6/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8807949089c596c44f36d86b4409e149/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e85f871ce7d9bb38b47d117724df00e6/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e85f871ce7d9bb38b47d117724df00e6/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_8807949089c596c44f36d86b4409e149/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8807949089c596c44f36d86b4409e149/testbuild/testprog[0m
 
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e85f871ce7d9bb38b47d117724df00e6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_8807949089c596c44f36d86b4409e149/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
 err: /usr/bin/ld: cannot find -lpython2.7
 collect2: error: ld returned 1 exit status
 
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/sovietreborn/ns3-lbt_research/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140446754589904: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e85f871ce7d9bb38b47d117724df00e6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+	{task 139623630703056: cxxprogram test.cpp.1.o -> testprog}
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_8807949089c596c44f36d86b4409e149/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
 
 not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/bindings/python: The configuration failed
 
 
 # try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
@@ -660,276 +660,13 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a3a1844d56b9ec39ab7fd5cfc12c4a7e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2d7faefeedeea358ca97e9a604837f65/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a3a1844d56b9ec39ab7fd5cfc12c4a7e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a3a1844d56b9ec39ab7fd5cfc12c4a7e/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_2d7faefeedeea358ca97e9a604837f65/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2d7faefeedeea358ca97e9a604837f65/testbuild/testprog[0m
 
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a3a1844d56b9ec39ab7fd5cfc12c4a7e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7']
-err: /usr/bin/ld: cannot find -lpython2.7
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754652688: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a3a1844d56b9ec39ab7fd5cfc12c4a7e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$prefix/libs, and pythonXY name rather than pythonX.Y (win32)
-
-------------------------------------------------------
-Checking for library python2.7 in $prefix/libs
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_e95d7457a9cbffb97e6fc67f218be890/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e95d7457a9cbffb97e6fc67f218be890/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e95d7457a9cbffb97e6fc67f218be890/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e95d7457a9cbffb97e6fc67f218be890/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython2.7']
-err: /usr/bin/ld: cannot find -lpython2.7
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754653712: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e95d7457a9cbffb97e6fc67f218be890/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython2.7']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$python_LIBDIR: ['/usr/lib']
-
-------------------------------------------------------
-Checking for library python2.7m in LIBDIR
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_e7bb4c245a3e0b145ff166c76d1c638a/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e7bb4c245a3e0b145ff166c76d1c638a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e7bb4c245a3e0b145ff166c76d1c638a/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e7bb4c245a3e0b145ff166c76d1c638a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7m']
-err: /usr/bin/ld: cannot find -lpython2.7m
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754652816: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e7bb4c245a3e0b145ff166c76d1c638a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7m']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
-
-------------------------------------------------------
-Checking for library python2.7m in python_LIBPL
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_2e37befc19b3ec3c06c56be8d2e80bf9/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_2e37befc19b3ec3c06c56be8d2e80bf9/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_2e37befc19b3ec3c06c56be8d2e80bf9/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_2e37befc19b3ec3c06c56be8d2e80bf9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7m']
-err: /usr/bin/ld: cannot find -lpython2.7m
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754654736: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_2e37befc19b3ec3c06c56be8d2e80bf9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7m']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$prefix/libs, and pythonXY name rather than pythonX.Y (win32)
-
-------------------------------------------------------
-Checking for library python2.7m in $prefix/libs
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_d63e7edf5997778f810dc439b3012e5c/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_d63e7edf5997778f810dc439b3012e5c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d63e7edf5997778f810dc439b3012e5c/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_d63e7edf5997778f810dc439b3012e5c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython2.7m']
-err: /usr/bin/ld: cannot find -lpython2.7m
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754655760: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_d63e7edf5997778f810dc439b3012e5c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython2.7m']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$python_LIBDIR: ['/usr/lib']
-
-------------------------------------------------------
-Checking for library python27 in LIBDIR
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_26bcddccea3b85dafaf0136b90a4d0d8/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_26bcddccea3b85dafaf0136b90a4d0d8/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_26bcddccea3b85dafaf0136b90a4d0d8/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_26bcddccea3b85dafaf0136b90a4d0d8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython27']
-err: /usr/bin/ld: cannot find -lpython27
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754755152: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_26bcddccea3b85dafaf0136b90a4d0d8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython27']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
-
-------------------------------------------------------
-Checking for library python27 in python_LIBPL
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_e9e2957dfb72a2e5fcf3f633e75b7e35/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e9e2957dfb72a2e5fcf3f633e75b7e35/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e9e2957dfb72a2e5fcf3f633e75b7e35/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e9e2957dfb72a2e5fcf3f633e75b7e35/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython27']
-err: /usr/bin/ld: cannot find -lpython27
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754756176: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_e9e2957dfb72a2e5fcf3f633e75b7e35/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython27']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-# try again with -L$prefix/libs, and pythonXY name rather than pythonX.Y (win32)
-
-------------------------------------------------------
-Checking for library python27 in $prefix/libs
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_aa57b5d2a132dfa376e0ad3c4b788a81/test.cpp[0m
-
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_aa57b5d2a132dfa376e0ad3c4b788a81/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_aa57b5d2a132dfa376e0ad3c4b788a81/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_aa57b5d2a132dfa376e0ad3c4b788a81/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython27']
-err: /usr/bin/ld: cannot find -lpython27
-collect2: error: ld returned 1 exit status
-
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140446754757200: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_aa57b5d2a132dfa376e0ad3c4b788a81/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython27']
-
-not found
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
-
-
-### LIB NOT FOUND
-
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_2d7faefeedeea358ca97e9a604837f65/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7']
+yes
 Include path for Python extensions (found via distutils module): '/usr/include/python2.7'
 
 ------------------------------------------------------
@@ -954,32 +691,32 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a39c23d51d8f309ed549d601633acb67/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_33f7d3820d5f38ff1ac2a47952d6474e/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a39c23d51d8f309ed549d601633acb67/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_33f7d3820d5f38ff1ac2a47952d6474e/testbuild/test.cpp.1.o']
 err: ../test.cpp:2:20: fatal error: Python.h: No such file or directory
 compilation terminated.
 
-from /home/sovietreborn/ns-3-lbt/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/sovietreborn/ns3-lbt_research/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140446754655120: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a39c23d51d8f309ed549d601633acb67/testbuild/test.cpp.1.o']
+	{task 139623630799312: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_33f7d3820d5f38ff1ac2a47952d6474e/testbuild/test.cpp.1.o']
 
 Distutils not installed? Broken python installation? Get python-config now!
-from /home/sovietreborn/ns-3-lbt/bindings/python: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/bindings/python: The configuration failed
 ------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
-from /home/sovietreborn/ns-3-lbt/src: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/src: The configuration failed
 ------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
-from /home/sovietreborn/ns-3-lbt/src: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/src: The configuration failed
 ------------------------------------------------------
 Checking for click location
 not found
@@ -987,12 +724,12 @@ not found
 Checking for program 'pkg-config'
 not found
 find program=['pkg-config'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> None
-from /home/sovietreborn/ns-3-lbt/src/config-store: Could not find the program ['pkg-config']
+from /home/sovietreborn/ns3-lbt_research/src/config-store: Could not find the program ['pkg-config']
 ------------------------------------------------------
 Checking for program 'pkg-config'
 not found
 find program=['pkg-config'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> None
-from /home/sovietreborn/ns-3-lbt/src/config-store: Could not find the program ['pkg-config']
+from /home/sovietreborn/ns3-lbt_research/src/config-store: Could not find the program ['pkg-config']
 ------------------------------------------------------
 Checking for type uint128_t
 ==>
@@ -1006,9 +743,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_563ab0677f20287be33fa0335889230c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8968261c106c8cf1b83280f87f6bfe50/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_563ab0677f20287be33fa0335889230c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_8968261c106c8cf1b83280f87f6bfe50/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
   if ((uint128_t *) 0) return 0;
@@ -1023,18 +760,18 @@ err: ../test.cpp: In function ‘int main(int, char**)’:
   if (sizeof (uint128_t)) return 0;
               ^
 
-from /home/sovietreborn/ns-3-lbt/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/sovietreborn/ns3-lbt_research/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140446754758544: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_563ab0677f20287be33fa0335889230c/testbuild/test.cpp.1.o']
+	{task 139623630802768: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_8968261c106c8cf1b83280f87f6bfe50/testbuild/test.cpp.1.o']
 
 not found
-from /home/sovietreborn/ns-3-lbt/src/core: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/src/core: The configuration failed
 ------------------------------------------------------
 Checking for type __uint128_t
 ==>
@@ -1048,12 +785,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3916e1e21d94b56b290065ec3f581f36/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_53f0930c5a9a43ce6d6345e3138c3863/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_3916e1e21d94b56b290065ec3f581f36/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3916e1e21d94b56b290065ec3f581f36/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_53f0930c5a9a43ce6d6345e3138c3863/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_53f0930c5a9a43ce6d6345e3138c3863/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_3916e1e21d94b56b290065ec3f581f36/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_53f0930c5a9a43ce6d6345e3138c3863/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking high precision implementation
@@ -1069,12 +806,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_134283dcec94a5307a2c761fbba842b8/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_134283dcec94a5307a2c761fbba842b8/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_134283dcec94a5307a2c761fbba842b8/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_134283dcec94a5307a2c761fbba842b8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header inttypes.h
@@ -1087,12 +824,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_534bb5fe96c681e2e4a14905c965c49c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_534bb5fe96c681e2e4a14905c965c49c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_534bb5fe96c681e2e4a14905c965c49c/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_534bb5fe96c681e2e4a14905c965c49c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1105,24 +842,24 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_9b6aa97a872c6b9e59300f72f9c4340e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_eb2dfba57508aa4ee9d42af69453b286/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_9b6aa97a872c6b9e59300f72f9c4340e/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_eb2dfba57508aa4ee9d42af69453b286/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
-from /home/sovietreborn/ns-3-lbt/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/sovietreborn/ns3-lbt_research/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140446754757392: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_9b6aa97a872c6b9e59300f72f9c4340e/testbuild/test.cpp.1.o']
+	{task 139623630912720: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_eb2dfba57508aa4ee9d42af69453b286/testbuild/test.cpp.1.o']
 
 not found
-from /home/sovietreborn/ns-3-lbt/src/core: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/src/core: The configuration failed
 ------------------------------------------------------
 Checking for header sys/types.h
 ==>
@@ -1134,12 +871,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5714085fd54a9b1a3b387a7cf2364e87/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_36e83530ec4a473e08eeb58f8ce367fd/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_5714085fd54a9b1a3b387a7cf2364e87/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_5714085fd54a9b1a3b387a7cf2364e87/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_36e83530ec4a473e08eeb58f8ce367fd/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_36e83530ec4a473e08eeb58f8ce367fd/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_5714085fd54a9b1a3b387a7cf2364e87/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_36e83530ec4a473e08eeb58f8ce367fd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header sys/stat.h
@@ -1152,12 +889,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6179bf7538ff347bf90ff963b0b58c43/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a76368eb8f7fd3d8758864352e0dfbfa/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_6179bf7538ff347bf90ff963b0b58c43/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_6179bf7538ff347bf90ff963b0b58c43/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_a76368eb8f7fd3d8758864352e0dfbfa/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a76368eb8f7fd3d8758864352e0dfbfa/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_6179bf7538ff347bf90ff963b0b58c43/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_a76368eb8f7fd3d8758864352e0dfbfa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header dirent.h
@@ -1170,12 +907,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_8b8f8c5245ae0dbed511ddd4cada29b1/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_025175640802d3c68b5add13f705b24b/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_8b8f8c5245ae0dbed511ddd4cada29b1/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_8b8f8c5245ae0dbed511ddd4cada29b1/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_025175640802d3c68b5add13f705b24b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_025175640802d3c68b5add13f705b24b/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_8b8f8c5245ae0dbed511ddd4cada29b1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_025175640802d3c68b5add13f705b24b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header stdlib.h
@@ -1188,12 +925,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_60c35c7bc1942c271948d036dd426aee/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1787beb3b09d50b41089ea6818362e79/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_60c35c7bc1942c271948d036dd426aee/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_60c35c7bc1942c271948d036dd426aee/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_1787beb3b09d50b41089ea6818362e79/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1787beb3b09d50b41089ea6818362e79/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_60c35c7bc1942c271948d036dd426aee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_1787beb3b09d50b41089ea6818362e79/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header signal.h
@@ -1206,12 +943,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3f5820ef90d252796894f898e21e1bc2/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a8c0c57828b8567a071179929b070569/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_3f5820ef90d252796894f898e21e1bc2/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3f5820ef90d252796894f898e21e1bc2/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_a8c0c57828b8567a071179929b070569/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a8c0c57828b8567a071179929b070569/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_3f5820ef90d252796894f898e21e1bc2/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_a8c0c57828b8567a071179929b070569/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header pthread.h
@@ -1226,12 +963,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c55088ac322fb1fe30aea486a7b7ad8e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b5b1ccf1d1553c266b3c1d8f4b1f40b4/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_c55088ac322fb1fe30aea486a7b7ad8e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c55088ac322fb1fe30aea486a7b7ad8e/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_b5b1ccf1d1553c266b3c1d8f4b1f40b4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b5b1ccf1d1553c266b3c1d8f4b1f40b4/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_c55088ac322fb1fe30aea486a7b7ad8e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_b5b1ccf1d1553c266b3c1d8f4b1f40b4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header stdint.h
@@ -1244,12 +981,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_134283dcec94a5307a2c761fbba842b8/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_134283dcec94a5307a2c761fbba842b8/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_134283dcec94a5307a2c761fbba842b8/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_134283dcec94a5307a2c761fbba842b8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_9b226f39ba67bb86b02aa03c8d0d3b2b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header inttypes.h
@@ -1262,12 +999,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_534bb5fe96c681e2e4a14905c965c49c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_534bb5fe96c681e2e4a14905c965c49c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_534bb5fe96c681e2e4a14905c965c49c/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_534bb5fe96c681e2e4a14905c965c49c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_38bfd44e737cbbddbdbdd38e352d5108/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1280,24 +1017,24 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_9b6aa97a872c6b9e59300f72f9c4340e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_eb2dfba57508aa4ee9d42af69453b286/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_9b6aa97a872c6b9e59300f72f9c4340e/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_eb2dfba57508aa4ee9d42af69453b286/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
-from /home/sovietreborn/ns-3-lbt/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/sovietreborn/ns3-lbt_research/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/sovietreborn/ns-3-lbt/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/sovietreborn/ns3-lbt_research/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140446754758160: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_9b6aa97a872c6b9e59300f72f9c4340e/testbuild/test.cpp.1.o']
+	{task 139623630802128: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_eb2dfba57508aa4ee9d42af69453b286/testbuild/test.cpp.1.o']
 
 not found
-from /home/sovietreborn/ns-3-lbt/src/core: The configuration failed
+from /home/sovietreborn/ns3-lbt_research/src/core: The configuration failed
 ------------------------------------------------------
 Checking for library rt
 ==>
@@ -1308,12 +1045,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f388f310fa0bd6a65d9c9dc96c31a815/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_addf0371a8616e68841faceb17980e72/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_f388f310fa0bd6a65d9c9dc96c31a815/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f388f310fa0bd6a65d9c9dc96c31a815/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_addf0371a8616e68841faceb17980e72/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_addf0371a8616e68841faceb17980e72/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_f388f310fa0bd6a65d9c9dc96c31a815/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_addf0371a8616e68841faceb17980e72/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1326,12 +1063,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_4ae7be99cd773accc024b5bce826c3bb/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_e656445a5066040ba636c7811720b1d8/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_4ae7be99cd773accc024b5bce826c3bb/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_4ae7be99cd773accc024b5bce826c3bb/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_e656445a5066040ba636c7811720b1d8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e656445a5066040ba636c7811720b1d8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_4ae7be99cd773accc024b5bce826c3bb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_e656445a5066040ba636c7811720b1d8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header net/if.h
@@ -1344,12 +1081,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_19335f4bcddfe34497c4f70544378464/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_baa46ddbdf38b5ca5a03a5ae915f4a58/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_19335f4bcddfe34497c4f70544378464/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_19335f4bcddfe34497c4f70544378464/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_baa46ddbdf38b5ca5a03a5ae915f4a58/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_baa46ddbdf38b5ca5a03a5ae915f4a58/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_19335f4bcddfe34497c4f70544378464/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_baa46ddbdf38b5ca5a03a5ae915f4a58/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1362,12 +1099,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_2bff5a4165473a48958ac301c1deb6a5/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d312ba24b4d63857b9df575ba4b6bc9f/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_2bff5a4165473a48958ac301c1deb6a5/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_2bff5a4165473a48958ac301c1deb6a5/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_d312ba24b4d63857b9df575ba4b6bc9f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d312ba24b4d63857b9df575ba4b6bc9f/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_2bff5a4165473a48958ac301c1deb6a5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_d312ba24b4d63857b9df575ba4b6bc9f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1380,12 +1117,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_02dd263ec6f681d81aa005c9a599b450/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_21663ecde4703fe8391cca0b3ddc2591/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_02dd263ec6f681d81aa005c9a599b450/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_02dd263ec6f681d81aa005c9a599b450/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_21663ecde4703fe8391cca0b3ddc2591/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_21663ecde4703fe8391cca0b3ddc2591/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_02dd263ec6f681d81aa005c9a599b450/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_21663ecde4703fe8391cca0b3ddc2591/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1398,12 +1135,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_942223b1a46d1f6c0e07188373a1999d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_17bd52a54a4e9036a52cad4ee70dba2e/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_942223b1a46d1f6c0e07188373a1999d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_942223b1a46d1f6c0e07188373a1999d/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_17bd52a54a4e9036a52cad4ee70dba2e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_17bd52a54a4e9036a52cad4ee70dba2e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_942223b1a46d1f6c0e07188373a1999d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_17bd52a54a4e9036a52cad4ee70dba2e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for NSC location
@@ -1412,7 +1149,7 @@ not found
 Checking for program 'pkg-config'
 not found
 find program=['pkg-config'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> None
-from /home/sovietreborn/ns-3-lbt/src/stats: Could not find the program ['pkg-config']
+from /home/sovietreborn/ns3-lbt_research/src/stats: Could not find the program ['pkg-config']
 ------------------------------------------------------
 Checking for header linux/if_tun.h
 ==>
@@ -1424,12 +1161,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_02dd263ec6f681d81aa005c9a599b450/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_21663ecde4703fe8391cca0b3ddc2591/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_02dd263ec6f681d81aa005c9a599b450/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_02dd263ec6f681d81aa005c9a599b450/testbuild/testprog[0m
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_21663ecde4703fe8391cca0b3ddc2591/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_21663ecde4703fe8391cca0b3ddc2591/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_02dd263ec6f681d81aa005c9a599b450/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_21663ecde4703fe8391cca0b3ddc2591/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for program 'sudo'
@@ -1439,73 +1176,73 @@ find program=['sudo'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.loca
 Checking for program 'valgrind'
 not found
 find program=['valgrind'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> None
-from /home/sovietreborn/ns-3-lbt: Could not find the program ['valgrind']
+from /home/sovietreborn/ns3-lbt_research: Could not find the program ['valgrind']
 ------------------------------------------------------
 Checking for program 'pkg-config'
 not found
 find program=['pkg-config'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> None
-from /home/sovietreborn/ns-3-lbt: Could not find the program ['pkg-config']
+from /home/sovietreborn/ns3-lbt_research: Could not find the program ['pkg-config']
 ------------------------------------------------------
 python-config
 not found
 find program=['libgcrypt-config'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
-from /home/sovietreborn/ns-3-lbt: Could not find the program ['libgcrypt-config']
+from /home/sovietreborn/ns3-lbt_research: Could not find the program ['libgcrypt-config']
 ----------------------------------------------------------------
 Checking for compilation flag -Wno-error=deprecated-d... support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_459ac415b3aca543ab673d412ca49b87/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_4f0cff940a1745d707adb0d05e7428c3/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_459ac415b3aca543ab673d412ca49b87/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_4f0cff940a1745d707adb0d05e7428c3/testbuild/test.cpp.1.o']
 ok
 ----------------------------------------------------------------
 Checking for compilation flag -Wno-error=deprecated-d... support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_a75589cbd4a97b3bc100cd23c4d24d0f/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_84a09ffadfc92bac95d0c4c4f2299a44/test.c[0m
 
-['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a75589cbd4a97b3bc100cd23c4d24d0f/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_84a09ffadfc92bac95d0c4c4f2299a44/testbuild/test.c.1.o']
 ok
 ----------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_459ac415b3aca543ab673d412ca49b87/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_4f0cff940a1745d707adb0d05e7428c3/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_459ac415b3aca543ab673d412ca49b87/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_4f0cff940a1745d707adb0d05e7428c3/testbuild/test.cpp.1.o']
 ok
 ----------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_a75589cbd4a97b3bc100cd23c4d24d0f/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_84a09ffadfc92bac95d0c4c4f2299a44/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a75589cbd4a97b3bc100cd23c4d24d0f/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_84a09ffadfc92bac95d0c4c4f2299a44/testbuild/test.c.1.o']
 ok
 ----------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_459ac415b3aca543ab673d412ca49b87/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_4f0cff940a1745d707adb0d05e7428c3/test.cpp[0m
 
-['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_459ac415b3aca543ab673d412ca49b87/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O3', '-g', '-Wall', '-Werror', '-march=native', '-fstrict-overflow', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_4f0cff940a1745d707adb0d05e7428c3/testbuild/test.cpp.1.o']
 ok
 ----------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_a75589cbd4a97b3bc100cd23c4d24d0f/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_84a09ffadfc92bac95d0c4c4f2299a44/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/sovietreborn/ns-3-lbt/build/.conf_check_a75589cbd4a97b3bc100cd23c4d24d0f/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/sovietreborn/ns3-lbt_research/build/.conf_check_84a09ffadfc92bac95d0c4c4f2299a44/testbuild/test.c.1.o']
 ok
 ----------------------------------------------------------------
 Checking for program 'doxygen'
 not found
 find program=['doxygen'] paths=['/home/sovietreborn/bin', '/home/sovietreborn/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> None
-from /home/sovietreborn/ns-3-lbt: Could not find the program ['doxygen']
+from /home/sovietreborn/ns3-lbt_research: Could not find the program ['doxygen']
