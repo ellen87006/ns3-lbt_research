@@ -1,0 +1,3 @@
+#Id    sent    rcvd rcvd/sent lost delayed latencyMean latencyStddev
+ 48    7999    7937     0.992   62       0       0.134         1.147
+ 49    7999    7952     0.994   47       0       0.325         1.175
