@@ -34,19 +34,19 @@ fi
 
 # need this as otherwise waf won't find the executables
 cd ../../../../
-for ftpLambda in 0.5 1 1.5 2.5 ;do
-  for MaxCws in 32 ; do
+#for ftpLambda in 0.5 1 1.5 2.5 ;do
+  for MaxCws in 64 ; do
   # Energy detection threshold for LAA
-      for MinCws in 16 ; do
-        for lbtTxop in 4  ; do 
+      for MinCws in 32 ; do
+        for lbtTxop in 5.0  ; do 
             for cell in Wifi Laa ; do
                 # Make the simulation duration inversly proportional to ftpLambda
-                duration=$(echo "$base_duration/$ftpLambda" | bc)
+                duration=${base_duration}
                 simTag="eD_${energyDetection}_ftpLambda_${ftpLambda}_cellA_${cell}"
                 /usr/bin/time -f '%e %U %S %K %M %x %C' -o "${outputDir}"/time_stats -a \
-                ./waf --run laa-wifi-indoor --command="%s --udpPacketSize=${Udpsize} --ns3::LbtAccessManager::DeferTime=${initalCCA} --ns3::LbtAccessManager::MaxCw=${MaxCws} --ns3::LbtAccessManager::MinCw=${MinCws} --cellConfigA=${cell} --cellConfigB=Wifi --lbtTxop=${lbtTxop} --logWifiRetries=1 --logWifiFailRetries=1 --logPhyArrivals=1 --logPhyNodeId=${logNodeId} --transport=${transports} --duration=${duration} --cwUpdateRule=${rules} --logHarqFeedback=1 --logTxops=1 --logCwChanges=1 --logBackoffChanges=1 --laaEdThreshold=${energyDetection} --simTag=${simTag} --outputDir=${outputDir} --voiceEnabled=${voiceEnabled} --dropPackets=${dropPackets} --ns3::TcpSocket::SegmentSize=${tcpSegSize} --tcpRlcMode=${tcpRlcMode} --ns3::LteEnbRrc::DefaultTransmissionMode=${laaTxMode} --RngRun=${RngRun}"
+                ./waf --run laa-wifi-simple --command="%s --ChannelAccessManager=Lbt --udpRate=${udprate} --udpPacketSize=${Udpsize} --ns3::LbtAccessManager::DeferTime=${initalCCA} --ns3::LbtAccessManager::MaxCw=${MaxCws} --ns3::LbtAccessManager::MinCw=${MinCws} --cellConfigA=${cell} --cellConfigB=Wifi --lbtTxop=${lbtTxop} --logWifiRetries=1 --logWifiFailRetries=1 --logPhyArrivals=1 --transport=${transports} --duration=${duration} --cwUpdateRule=${rules} --logHarqFeedback=1 --logTxops=1 --logCwChanges=1 --logBackoffChanges=1 --laaEdThreshold=${energyDetection} --simTag=${simTag} --outputDir=${outputDir} --voiceEnabled=${voiceEnabled} --dropPackets=${dropPackets} --ns3::TcpSocket::SegmentSize=${tcpSegSize} --tcpRlcMode=${tcpRlcMode} --ns3::LteEnbRrc::DefaultTransmissionMode=${laaTxMode} --RngRun=${RngRun}"
             done
           done
       done
   done
-done
+#done

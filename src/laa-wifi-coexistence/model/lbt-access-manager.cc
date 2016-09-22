@@ -635,6 +635,10 @@ LbtAccessManager::UpdateFailedCw (void)
   NS_LOG_FUNCTION (this);
   uint32_t oldValue = m_cw.Get ();
   m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMax);
+  	if(m_txop -MilliSeconds (5)<MilliSeconds (4))
+            		m_txop=m_txop;
+            	else
+            	m_txop -=MilliSeconds (5);
   NS_LOG_DEBUG ("CW updated from " << oldValue << " to " << m_cw);
   m_lastCWUpdateTime = Simulator::Now ();
 }
@@ -754,6 +758,14 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
               {
                 updateFailedCw  = true;
               }
+            else
+            {	
+            	if(m_txop +MilliSeconds (5)>MilliSeconds (14))
+            		m_txop=m_txop;
+            	else
+            	m_txop +=MilliSeconds (5);
+            	m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMin);
+            }
           }
           break;
         case NACKS_80_PERCENT:
