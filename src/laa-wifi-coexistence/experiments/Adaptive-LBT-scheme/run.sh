@@ -35,10 +35,10 @@ fi
 # need this as otherwise waf won't find the executables
 cd ../../../../
 for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
-  for MaxCws in 32 ; do
+  for MaxCws in 64 ; do
   # Energy detection threshold for LAA
-      for MinCws in 16 ; do
-        for lbtTxop in 4  ; do 
+      for MinCws in 32 ; do
+        for lbtTxop in 5  ; do 
             for cell in Wifi Laa ; do
                 # Make the simulation duration inversly proportional to ftpLambda
                 duration=$(echo "$base_duration/$ftpLambda" | bc)

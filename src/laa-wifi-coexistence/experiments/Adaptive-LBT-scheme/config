@@ -1,8 +1,8 @@
 transports="Ftp"
 logNodeId="6"
-base_duration=120
+base_duration=60
 energyDetection="-82.0"
-voiceEnabled="1"
+voiceEnabled="0"
 dropPackets="1"
 tcpSegSize="1440"
 RngRun="1"

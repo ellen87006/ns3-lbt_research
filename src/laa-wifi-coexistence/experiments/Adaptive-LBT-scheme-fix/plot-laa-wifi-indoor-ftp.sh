@@ -29,7 +29,7 @@ THROUGHPUT_CDF_RANGE="[0:150][0:1]"
 #  Latency CDF
 ##############################################################
 
-for for ftpLambda in 0.5 1 1.5 2.5 ;do
+for ftpLambda in 0.5 1 1.5 2.5 ;do
     for energyDetection in -62.0 -72.0 -82.0 ; do
         for cell in Wifi Laa ; do
             simTag="eD_${energyDetection}_ftpLambda_${ftpLambda}_cellA_${cell}"
