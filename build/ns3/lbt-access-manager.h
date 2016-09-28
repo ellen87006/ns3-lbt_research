@@ -116,7 +116,7 @@ private:
   void TransitionToBusy (Time duration);
   void TransitionFromBusy ();
   uint32_t GetBackoffSlots ();
-  void UpdateFailedCw ();
+  void UpdateFailedCw (double nackCounter,double harqFeedback);
   void UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> harqFeedback);
   void SetGrant();
 
