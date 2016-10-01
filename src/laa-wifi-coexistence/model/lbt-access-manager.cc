@@ -657,31 +657,7 @@ LbtAccessManager::UpdateFailedCw (double nackCounter,double harqFeedback)
 	  	if(m_txop -MilliSeconds (5)<MilliSeconds (4))
 			m_txop=MilliSeconds (4);
 		else
-			m_txop -=MilliSeconds (4);
-  	}
-  	else if ((nackCounter)/(harqFeedback) == 0.6)
-  	{
-  	m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMax);
-	  	if(m_txop -MilliSeconds (5)<MilliSeconds (4))
-			m_txop=MilliSeconds (4);
-		else
-			m_txop -=MilliSeconds (3);
-  	}
-  	else if ((nackCounter)/(harqFeedback) == 0.4)
-  	{
-  	m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMax);
-	  	if(m_txop -MilliSeconds (5)<MilliSeconds (4))
-			m_txop=MilliSeconds (4);
-		else
-			m_txop -=MilliSeconds (2);
-  	}
-  	else if ((nackCounter)/(harqFeedback) == 0.2)
-  	{
-  	m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMax);
-	  	if(m_txop -MilliSeconds (5)<MilliSeconds (4))
-			m_txop=MilliSeconds (4);
-		else
-			m_txop -=MilliSeconds (1);
+			m_txop -=MilliSeconds ((nackCounter)/(harqFeedback)*5);
   	}
   }break;
    case NACKS_80_PERCENT:
@@ -807,7 +783,7 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
             else
               {
               	if(m_txop +MilliSeconds (5)>MilliSeconds (14))
-            		m_txop=MilliSeconds (14);
+            		m_txop=MilliSeconds (24);
             	else
             	m_txop +=MilliSeconds (5);
             	m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMin);

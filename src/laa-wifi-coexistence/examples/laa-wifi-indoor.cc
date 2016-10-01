@@ -269,7 +269,7 @@ main (int argc, char *argv[])
   // This program has two operators, and nominally 4 cells per operator
   // and 5 UEs per cell.  These variables can be tuned below for
   // e.g. debugging on a smaller scale scenario
-  uint32_t numUePerCell = 5;
+  uint32_t numUePerCell = 10;
   uint32_t numCells = 4;
 
   // Some debugging settings not exposed as command line args are below
