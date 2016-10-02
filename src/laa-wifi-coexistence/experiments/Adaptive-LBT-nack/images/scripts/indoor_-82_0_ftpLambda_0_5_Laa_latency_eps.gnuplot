@@ -16,8 +16,4 @@
  unset title
  
  unset title
- 
- unset title
- 
- unset title
- plot [0:1][0:500] "results/cdf_latency_eD_-82.0_ftpLambda_0.5_cellA_Laa_rule_any_A" using ($2):($1)  with linespoints ls 1  title "operator A (LAA)"  , "results/cdf_latency_eD_-82.0_ftpLambda_0.5_cellA_Laa_rule_any_B" using ($2):($1)  with linespoints ls 2  title "operator B (Wi-Fi)"  
+ plot [0:1][0:500] "results/cdf_latency_eD_-82.0_ftpLambda_0.5_cellA_Laa_anyA" using ($2):($1)  with linespoints ls 1  title "Before rule operator A"  , "results/cdf_latency_eD_-82.0_ftpLambda_0.5_cellA_Laa_allA" using ($2):($1)  with linespoints ls 2  title "NACK rule operator A"  , "results/cdf_latency_eD_-82.0_ftpLambda_0.5_cellA_Laa_anyB" using ($2):($1)  with linespoints ls 3  title "Before rule operator B"  , "results/cdf_latency_eD_-82.0_ftpLambda_0.5_cellA_Laa_allB" using ($2):($1)  with linespoints ls 4  title "NACK rule operator B"  

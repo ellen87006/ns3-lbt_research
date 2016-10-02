@@ -60,16 +60,4 @@
  unset title
  
  unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- plot [0:1][0:150] "results/cdf_throughput_eD_-82.0_ftpLambda_1.5_cellA_Wifi_rule_any_A" using ($2):($1)  with linespoints ls 1  title "operator A (Wi-Fi)"  , "results/cdf_throughput_eD_-82.0_ftpLambda_1.5_cellA_Wifi_rule_any_B" using ($2):($1)  with linespoints ls 2  title "operator B (Wi-Fi)"  
+ plot [0:1][70:140] "results/cdf_throughput_eD_-82.0_ftpLambda_1.5_cellA_Wifi_rule_any_A" using ($2):($1)  with linespoints ls 1  title "Before rule operator A"  , "results/cdf_throughput_eD_-82.0_ftpLambda_1.5_cellA_Wifi_rule_all_A" using ($2):($1)  with linespoints ls 2  title "NACK rule operator A"  , "results/cdf_throughput_eD_-82.0_ftpLambda_1.5_cellA_Wifi_rule_any_B" using ($2):($1)  with linespoints ls 3  title "Before rule operator B"  , "results/cdf_throughput_eD_-82.0_ftpLambda_1.5_cellA_Wifi_rule_all_B" using ($2):($1)  with linespoints ls 4  title "NACK rule operator B"  

@@ -22,15 +22,15 @@ print_traffic_model ()
 
 print_operator_laa_wifi () 
 {	
-    case $1  in
-	A)
-	    echo "operator A (LAA)"	
+    case $rules  in
+  	any)
+	    echo "Before rule operator $OPERATOR"	
 	    ;;
-	B)
-	    echo "operator B (Wi-Fi)"	
+  	all)
+	    echo "NACK rule operator $OPERATOR"	
 	    ;;
-	*)
-	    echo "unknown operator $OPERATOR"
+	  *)
+	    echo "haha operator $OPERATOR"
 	    ;;
     esac
 }
@@ -52,15 +52,15 @@ print_operator_lte_wifi ()
 
 print_operator_wifi_wifi () 
 {	
-    case $1  in
-	A)
-	    echo "operator A (Wi-Fi)"	
+    case $rules  in
+  	any)
+	    echo "Before rule operator $OPERATOR"	
 	    ;;
-	B)
-	    echo "operator B (Wi-Fi)"	
+  	all)
+	    echo "NACK rule operator $OPERATOR"	
 	    ;;
-	*)
-	    echo "unknown operator $OPERATOR"
+	  *)
+	    echo "haha operator $OPERATOR"
 	    ;;
     esac
 }
