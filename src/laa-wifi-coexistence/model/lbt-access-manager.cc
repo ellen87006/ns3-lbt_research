@@ -535,7 +535,17 @@ LbtAccessManager::GetBackoffSlots ()
 {
   NS_LOG_FUNCTION (this);
   // Integer between 0 and m_cw
-  return (m_rng->GetInteger (0, m_cw.Get ()));
+  switch(m_cwUpdateRule)
+  {
+  case ALL_NACKS:
+  {
+    return (m_rng->GetInteger (m_cw.Get (),m_cwMax));
+  }break;
+  default:
+  {
+   return (m_rng->GetInteger (m_cw.Get (),m_cwMax));
+  }break;
+  }
 }
 
 void
@@ -652,15 +662,13 @@ LbtAccessManager::UpdateFailedCw ()
   switch (m_cwUpdateRule)
   {
   case ANY_NACK:
-  {	
+  { 
     m_cw = m_cwMax;
   }break;
   case ALL_NACKS:
-  {	
-	cwtmp=m_cw.Get ()+int(harqFeedbacktmp*m_cw.Get ());
-	m_cw = std::min (cwtmp , m_cwMax);
-  	
-  	
+  { 
+  cwtmp=m_cw.Get ()+int(harqFeedbacktmp*m_cw.Get ());
+  m_cw = std::min (cwtmp , m_cwMax-1);
   }break;
    case NACKS_80_PERCENT:
   {
@@ -778,24 +786,24 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
         {
          case ALL_NACKS:
           {
-          	harqFeedbacktmp=double(nackCounter)/(double)harqFeedback.size();
+            harqFeedbacktmp=double(nackCounter)/(double)harqFeedback.size();
             if (nackCounter> 0)
               {
                 updateFailedCw = true;
                 if(m_txop-MilliSeconds (harqFeedbacktmp*5.0)<m_txopmin)
-				m_txop=m_txopmin;
-				else
-				m_txop -=MilliSeconds (harqFeedbacktmp*5.0);
+                m_txop=m_txopmin;
+                else
+                m_txop -=MilliSeconds (harqFeedbacktmp*5.0);
               }
             else
               {
-              	m_cw = m_cwMin;
-              	if(m_txop +m_txopadaptive>m_txopmax)
-            		m_txop=m_txopmax;
-            	else
-            	m_txop +=m_txopadaptive;
-  				
-            	
+                m_cw = m_cwMin;
+                if(m_txop +m_txopadaptive>m_txopmax)
+                m_txop=m_txopmax;
+                 else
+                 m_txop +=m_txopadaptive;
+          
+              
               }
           }
           break;
@@ -805,17 +813,17 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
               {
                 updateFailedCw  = true;
                 if(m_txop -m_txopadaptive<m_txopmin)
-				        m_txop=m_txopmin;
-				        else
-				        m_txop-=m_txopadaptive;
+                m_txop=m_txopmin;
+                else
+                m_txop-=m_txopadaptive;
               }
             else
-            {	m_cwMin=32;
-            	m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMin);
-            	if(m_txop +m_txopadaptive>m_txopmax)
-            		m_txop=m_txopmax;
-            	else
-            	m_txop +=m_txopadaptive;
+            { m_cwMin=32;
+              m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMin);
+              if(m_txop +m_txopadaptive>m_txopmax)
+                m_txop=m_txopmax;
+              else
+              m_txop +=m_txopadaptive;
             }
           }
           break;
@@ -849,7 +857,7 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
 
   if (updateFailedCw)
     {
-   	 
+     
       UpdateFailedCw ();
     }
   else
