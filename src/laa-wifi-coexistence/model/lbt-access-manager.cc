@@ -170,7 +170,7 @@ LbtAccessManager::GetTypeId (void)
                    MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
     .AddAttribute ("MaxTxop",
                    "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (14)),
+                   TimeValue (MilliSeconds (24)),
                    MakeTimeAccessor (&LbtAccessManager::m_txopmax),
                    MakeTimeChecker (MilliSeconds (4), MilliSeconds (40)))
     .AddAttribute ("MinTxop",
@@ -180,7 +180,7 @@ LbtAccessManager::GetTypeId (void)
                    MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
     .AddAttribute ("AdaptiveTxop",
                    "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (5)),
+                   TimeValue (MilliSeconds (4)),
                    MakeTimeAccessor (&LbtAccessManager::m_txopadaptive),
                    MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
     .AddAttribute ("UseReservationSignal",
@@ -301,7 +301,7 @@ LbtAccessManager::SetWifiPhy (Ptr<SpectrumWifiPhy> phy)
   m_wifiPhy->SetAttribute ("DisableWifiReception", BooleanValue (true));
   m_wifiPhy->SetAttribute ("CcaMode1Threshold", DoubleValue (m_edThreshold));
   // Initialization of post-attribute-construction variables can be done here
-  m_cw = m_cwMin;
+  m_cw = 16;
 }
 
 void
@@ -539,11 +539,11 @@ LbtAccessManager::GetBackoffSlots ()
   {
   case ALL_NACKS:
   {
-    return (m_rng->GetInteger (m_cw.Get (),m_cwMax));
+    return (m_rng->GetInteger (m_cwMin-1,m_cw.Get ()));
   }break;
   default:
   {
-   return (m_rng->GetInteger (m_cw.Get (),m_cwMax));
+   return (m_rng->GetInteger (m_cwMin-1,m_cw.Get ()));
   }break;
   }
 }
@@ -667,8 +667,8 @@ LbtAccessManager::UpdateFailedCw ()
   }break;
   case ALL_NACKS:
   { 
-  cwtmp=m_cw.Get ()+int(harqFeedbacktmp*m_cw.Get ());
-  m_cw = std::min (cwtmp , m_cwMax-1);
+  cwtmp=m_cw.Get()+int(harqFeedbacktmp*m_cw.Get ());
+  m_cw = std::min (cwtmp , m_cwMax);
   }break;
    case NACKS_80_PERCENT:
   {
