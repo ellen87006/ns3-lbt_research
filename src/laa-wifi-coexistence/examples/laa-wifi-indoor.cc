@@ -452,7 +452,7 @@ main (int argc, char *argv[])
   phyParams.m_ueTxGain = 0; // dB antenna gain
   phyParams.m_ueRxGain = 0; // dB antenna gain
   phyParams.m_ueTxPower = 23; // dBm
-  phyParams.m_ueNoiseFigure = 9; // dB
+  phyParams.m_ueNoiseFigure = 5; // dB
 
   ConfigureAndRunScenario (cellConfigA, cellConfigB, bsNodesA, bsNodesB, ueNodesA, ueNodesB, phyParams, durationTime, transport, indoorLossModel, disableApps, lteDutyCycle, generateRem, outputDir + "/laa_wifi_indoor_" + simTag, simulationParams.str ());
 
