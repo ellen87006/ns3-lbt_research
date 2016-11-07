@@ -9,24 +9,10 @@
  set key bottom right 
  set term postscript eps enhanced   color   
  set output "images/ps/indoor_-82_0_ftpLambda_0_95_Laa_throughput.eps" 
-    set xlabel "CDF"
+    set xlabel "Flow number  CDF"
  set ylabel "Throughput [Mbps]"
  set title "EdThresh=-82.0, FtpLambda=0.95, CellA=Laa, UDP" 
   
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
  unset title
  
  unset title

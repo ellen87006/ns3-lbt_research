@@ -28,7 +28,7 @@ THROUGHPUT_CDF_RANGE="[0:1][70:140]"
 #  Latency CDF
 ##############################################################
 
-for ftpLambda in 0.35 0.5 0.65 0.8 0.95;do
+for ftpLambda in 0.35 0.5 0.65 0.8 0.95 1 1.5 2 2.5;do
     for energyDetection in -62.0 -72.0 -82.0 ; do
         for cell in Wifi Laa ; do 
             simTag="eD_${energyDetection}_ftpLambda_${ftpLambda}_cellA_${cell}"
@@ -65,7 +65,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95;do
             done
     
             PLOTTYPE="with linespoints"
-            XLABEL="CDF"
+            XLABEL="Flow number CDF"
             YLABEL="Latency [ms]"
             RANGE=$LATENCY_CDF_RANGE
             OPTIONS="$BASE_OPTIONS ; set key bottom right"
@@ -85,7 +85,7 @@ done
 #  High resolution Latency CDF
 ##############################################################
 
-for ftpLambda in 0.35 0.5 0.65 0.8 0.95;do
+for ftpLambda in 0.35 0.5 0.65 0.8 0.95 1 1.5 2 2.5;do
     for energyDetection in -62.0 -72.0 -82.0 ; do
         for cell in Wifi Laa ; do
             simTag="eD_${energyDetection}_ftpLambda_${ftpLambda}_cellA_${cell}"
@@ -121,7 +121,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95;do
             done
     
             PLOTTYPE="with linespoints"
-            XLABEL="CDF"
+            XLABEL="Flow number CDF"
             YLABEL="Latency [ms]"
             RANGE=$HI_RES_LATENCY_CDF_RANGE
             OPTIONS="$BASE_OPTIONS ; set key bottom right"
@@ -142,7 +142,7 @@ done
 ##############################################################
 
 
-for ftpLambda in 0.35 0.5 0.65 0.8 0.95;do
+for ftpLambda in 0.35 0.5 0.65 0.8 0.95 1 1.5 2 2.5;do
     for energyDetection in -62.0 -72.0 -82.0 ; do
         for cell in Wifi Laa ; do
             simTag="eD_${energyDetection}_ftpLambda_${ftpLambda}_cellA_${cell}"
@@ -178,7 +178,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95;do
             done
 
             PLOTTYPE="with linespoints"
-            XLABEL="CDF"
+            XLABEL="Flow number  CDF"
             YLABEL="Throughput [Mbps]"
             RANGE=$THROUGHPUT_CDF_RANGE
             OPTIONS="$BASE_OPTIONS ; set key bottom right"

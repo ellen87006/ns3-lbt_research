@@ -9,7 +9,7 @@
  set key bottom right 
  set term postscript eps enhanced   color   
  set output "images/ps/indoor_-82_0_ftpLambda_0_95_Wifi_latency.eps" 
-    set xlabel "CDF"
+    set xlabel "Flow number CDF"
  set ylabel "Latency [ms]"
  set title "FtpLambda=0.95, CellA=Wifi, UDP" 
   

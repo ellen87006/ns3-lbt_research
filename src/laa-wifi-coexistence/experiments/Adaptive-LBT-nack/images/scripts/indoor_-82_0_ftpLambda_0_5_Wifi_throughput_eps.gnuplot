@@ -9,38 +9,10 @@
  set key bottom right 
  set term postscript eps enhanced   color   
  set output "images/ps/indoor_-82_0_ftpLambda_0_5_Wifi_throughput.eps" 
-    set xlabel "CDF"
+    set xlabel "Flow number  CDF"
  set ylabel "Throughput [Mbps]"
  set title "FtpLambda=0.5, CellA=Wifi, UDP" 
   
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
  unset title
  
  unset title

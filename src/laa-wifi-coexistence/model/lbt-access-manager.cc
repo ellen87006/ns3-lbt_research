@@ -148,7 +148,7 @@ LbtAccessManager::GetTypeId (void)
     .SetParent<ChannelAccessManager> ()
     .SetGroupName ("laa-wifi-coexistence")
     .AddAttribute ("Slot", "The duration of a Slot.",
-                   TimeValue (MicroSeconds (9)),
+                   TimeValue (MicroSeconds (20)),
                    MakeTimeAccessor (&LbtAccessManager::m_slotTime),
                    MakeTimeChecker ())
     .AddAttribute ("DeferTime", "TimeInterval to defer during CCA",
@@ -790,10 +790,10 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
             if (nackCounter> 0)
               {
                 updateFailedCw = true;
-                if(m_txop-MilliSeconds (harqFeedbacktmp*5.0)<m_txopmin)
+                if(m_txop-MilliSeconds (double(nackCounter)/(double)harqFeedback.size()*5.0)<m_txopmin)
                 m_txop=m_txopmin;
                 else
-                m_txop -=MilliSeconds (harqFeedbacktmp*5.0);
+                m_txop -=MilliSeconds (double(nackCounter)/(double)harqFeedback.size()*5.0);
               }
             else
               {
