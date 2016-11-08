@@ -48,40 +48,4 @@
  unset title
  
  unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
- 
- unset title
  plot [0:1][0:50] "results/cdf_latency_eD_-82.0_ftpLambda_2.5_cellA_Laa_rule_any_A" using ($2):($1)  with linespoints ls 1  title "Before rule operator A"  , "results/cdf_latency_eD_-82.0_ftpLambda_2.5_cellA_Laa_rule_all_A" using ($2):($1)  with linespoints ls 2  title "NACK rule operator A"  , "results/cdf_latency_eD_-82.0_ftpLambda_2.5_cellA_Laa_rule_any_B" using ($2):($1)  with linespoints ls 3  title "Before rule operator B"  , "results/cdf_latency_eD_-82.0_ftpLambda_2.5_cellA_Laa_rule_all_B" using ($2):($1)  with linespoints ls 4  title "NACK rule operator B"  
