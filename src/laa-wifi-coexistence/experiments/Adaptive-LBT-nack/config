@@ -18,3 +18,4 @@ initalCCA="+43000.0ns"
 #maxtxop="24"
 #mintxop=4.0
 #adaptivetxop=5.0
+cwUpdateRules="nacks80"

@@ -1760,6 +1760,7 @@ SaveAssociationStats(std::string filename, const std::vector<AssociationEvent> &
 void
 ConfigureLte (Ptr<LteHelper> lteHelper, Ptr<PointToPointEpcHelper> epcHelper, Ipv4AddressHelper& internetIpv4Helper, NodeContainer bsNodes, NodeContainer ueNodes, NodeContainer clientNodes, NetDeviceContainer& bsDevices, NetDeviceContainer& ueDevices, struct PhyParams phyParams, std::vector<LteSpectrumValueCatcher>& lteDlSinrCatcherVector, std::bitset<40> absPattern, Transport_e transport)
 {
+  Config::SetDefault ("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue (2000000));
 
   // For LTE, the client node needs to be connected only to the PGW/SGW node
   // The EpcHelper will then take care of connecting the PGW/SGW node to the eNBs
@@ -2185,8 +2186,8 @@ ConfigureFtpClients (NodeContainer client, Ipv4InterfaceContainer servers, Time 
   randomVariable->SetStream (streamIndex++);
   ApplicationContainer clientApps;
   uint16_t port = 50000;
-  uint32_t ftpSegSize = 14480; // bytes
-  uint32_t ftpFileSize = 50000000; // bytes
+  uint32_t ftpSegSize = 1448; // bytes
+  uint32_t ftpFileSize = 512000; // bytes
   FileTransferHelper ftp ("ns3::UdpSocketFactory", Address ());
   ftp.SetAttribute ("SendSize", UintegerValue (ftpSegSize));
   ftp.SetAttribute ("FileSize", UintegerValue (ftpFileSize));
@@ -2234,7 +2235,7 @@ ConfigureTcpClients (NodeContainer client, Ipv4InterfaceContainer servers, Time 
   ApplicationContainer clientApps;
   uint16_t port = 50000;
   uint32_t ftpSegSize = 1448; // bytes
-  uint32_t ftpFileSize = 25000000; // bytes
+  uint32_t ftpFileSize = 512000; // bytes
   FileTransferHelper ftp ("ns3::TcpSocketFactory", Address ());
   ftp.SetAttribute ("SendSize", UintegerValue (ftpSegSize));
   ftp.SetAttribute ("FileSize", UintegerValue (ftpFileSize));
@@ -2263,30 +2264,20 @@ ConfigureTcpClients (NodeContainer client, Ipv4InterfaceContainer servers, Time 
 void
 StartFileTransfer (Ptr<ExponentialRandomVariable> ftpArrivals, ApplicationContainer clients, uint32_t nextClient, Time stopTime)
 {
-  NS_LOG_DEBUG ("Starting file transfer on client " << nextClient << " at time " << Simulator::Now ().GetSeconds ());
+  NS_ASSERT (nextClient >= 0 && nextClient < clients.GetN ());
   Ptr<Application> app = clients.Get (nextClient);
   NS_ASSERT (app);
+  NS_LOG_DEBUG ("Starting file transfer on client " << nextClient << " node number " << app->GetNode ()->GetId () << " at time " << Simulator::Now ().GetSeconds ());
   Ptr<FileTransferApplication> fileTransfer = DynamicCast <FileTransferApplication> (app);
   NS_ASSERT (fileTransfer);
   fileTransfer->SendFile ();
 
-  // We want to alternate between operators.  If there are N clients in the
-  // container, then clients 0 to (N/2-1) are for operator A, and clients
-  // N/2 to (N-1) are for operator B.  We would want a selection pattern
-  // such as "0, 10, 1, 11, 2, 12 ... 19, 0, 10, 1, 11..."
-  if (nextClient == (clients.GetN () - 1))
+  nextClient += 1;
+  if (nextClient == clients.GetN ())
     {
+      NS_LOG_DEBUG ("Next transfer will start a new set of file transfers across " << clients.GetN () << " clients");
       nextClient = 0;
     }
-  else if (nextClient < (clients.GetN () / 2))
-    {
-      nextClient += (clients.GetN () / 2);
-    }
-  else
-    {
-      nextClient -= (clients.GetN () / 2 - 1);
-    }
-  NS_ASSERT (nextClient >= 0 && nextClient < clients.GetN ());
   Time nextTime = Seconds (ftpArrivals->GetValue ());
   if (Simulator::Now () + nextTime < stopTime)
     {
@@ -2827,14 +2818,17 @@ ConfigureAndRunScenario (Config_e cellConfigA,
   // Application setup phase
   //
 
-  Ptr<ExponentialRandomVariable> ftpArrivals = CreateObject<ExponentialRandomVariable> ();
-  ftpArrivals->SetStream (streamIndex++);
+  Ptr<ExponentialRandomVariable> ftpArrivalsA = CreateObject<ExponentialRandomVariable> ();
+  ftpArrivalsA->SetStream (streamIndex++);
+  Ptr<ExponentialRandomVariable> ftpArrivalsB = CreateObject<ExponentialRandomVariable> ();
+  ftpArrivalsB->SetStream (streamIndex++);
   double ftpLambda;
   bool found = GlobalValue::GetValueByNameFailSafe ("ftpLambda", doubleValue);
   if (found)
     {
       ftpLambda = doubleValue.Get ();
-      ftpArrivals->SetAttribute ("Mean", DoubleValue (1 / ftpLambda));
+      ftpArrivalsA->SetAttribute ("Mean", DoubleValue (1 / ftpLambda));
+      ftpArrivalsB->SetAttribute ("Mean", DoubleValue (1 / ftpLambda));
     }
   uint32_t nextClient = 0;
 
@@ -2882,26 +2876,32 @@ ConfigureAndRunScenario (Config_e cellConfigA,
           ApplicationContainer ftpServerApps, ftpClientApps;
           ftpServerApps.Add (ConfigureFtpServers (ueNodesA, serverStartTime));
           ftpClientApps.Add (ConfigureFtpClients (clientNodesA, ipUeA, clientStartTime));
-          ftpServerApps.Add (ConfigureFtpServers (nonVoiceUeNodesB, serverStartTime));
-          ftpClientApps.Add (ConfigureFtpClients (clientNodesB, nonVoiceIpUeB, clientStartTime));
-          // Start file transfer arrival process
-          double firstArrival = ftpArrivals->GetValue ();
-          NS_LOG_DEBUG ("First FTP arrival at time " << clientStartTime.GetSeconds () + firstArrival);
-          Simulator::Schedule (clientStartTime + Seconds (firstArrival), &StartFileTransfer, ftpArrivals, ftpClientApps, nextClient, clientStopTime);
-
+          // Start file transfer arrival process in both networks
+          double firstArrivalA = ftpArrivalsA->GetValue ();
+          NS_LOG_DEBUG ("First FTP arrival for operator A at time " << clientStartTime.GetSeconds () + firstArrivalA);
+          Simulator::Schedule (clientStartTime + Seconds (firstArrivalA), &StartFileTransfer, ftpArrivalsA, ftpClientApps, nextClient, clientStopTime);
+          ApplicationContainer ftpServerAppsB, ftpClientAppsB;
+          ftpServerAppsB.Add (ConfigureFtpServers (nonVoiceUeNodesB, serverStartTime));
+          ftpClientAppsB.Add (ConfigureFtpClients (clientNodesB, nonVoiceIpUeB, clientStartTime));
+          double firstArrivalB = ftpArrivalsB->GetValue ();
+          NS_LOG_DEBUG ("First FTP arrival for operator B at time " << clientStartTime.GetSeconds () + firstArrivalB);
+          Simulator::Schedule (clientStartTime + Seconds (firstArrivalB), &StartFileTransfer, ftpArrivalsB, ftpClientAppsB, nextClient, clientStopTime);
         }
       else
         {
           ApplicationContainer tcpServerApps, tcpClientApps;
           tcpServerApps.Add (ConfigureTcpServers (ueNodesA, serverStartTime));
           tcpClientApps.Add (ConfigureTcpClients (clientNodesA, ipUeA, clientStartTime));
-          tcpServerApps.Add (ConfigureTcpServers (nonVoiceUeNodesB, serverStartTime));
-          tcpClientApps.Add (ConfigureTcpClients (clientNodesB, nonVoiceIpUeB, clientStartTime));
           // Start file transfer arrival process
-          double firstArrival = ftpArrivals->GetValue ();
-          NS_LOG_DEBUG ("First FTP arrival at time " << clientStartTime.GetSeconds () + firstArrival);
-          Simulator::Schedule (clientStartTime + Seconds (firstArrival), &StartFileTransfer, ftpArrivals, tcpClientApps, nextClient, clientStopTime);
-
+          double firstArrivalA = ftpArrivalsA->GetValue ();
+          NS_LOG_DEBUG ("First FTP arrival for operator A at time " << clientStartTime.GetSeconds () + firstArrivalA);
+          Simulator::Schedule (clientStartTime + Seconds (firstArrivalA), &StartFileTransfer, ftpArrivalsA, tcpClientApps, nextClient, clientStopTime);
+          ApplicationContainer tcpServerAppsB, tcpClientAppsB;
+          tcpServerAppsB.Add (ConfigureTcpServers (nonVoiceUeNodesB, serverStartTime));
+          tcpClientAppsB.Add (ConfigureTcpClients (clientNodesB, nonVoiceIpUeB, clientStartTime));
+          double firstArrivalB = ftpArrivalsB->GetValue ();
+          NS_LOG_DEBUG ("First FTP arrival for operator B at time " << clientStartTime.GetSeconds () + firstArrivalB);
+          Simulator::Schedule (clientStartTime + Seconds (firstArrivalB), &StartFileTransfer, ftpArrivalsB, tcpClientAppsB, nextClient, clientStopTime);
         }
       found = GlobalValue::GetValueByNameFailSafe ("voiceEnabled", booleanValue);
       if (found && (booleanValue.Get () == true))

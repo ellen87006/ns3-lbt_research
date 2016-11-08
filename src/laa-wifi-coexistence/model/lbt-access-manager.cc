@@ -148,7 +148,7 @@ LbtAccessManager::GetTypeId (void)
     .SetParent<ChannelAccessManager> ()
     .SetGroupName ("laa-wifi-coexistence")
     .AddAttribute ("Slot", "The duration of a Slot.",
-                   TimeValue (MicroSeconds (20)),
+                   TimeValue (MicroSeconds (9)),
                    MakeTimeAccessor (&LbtAccessManager::m_slotTime),
                    MakeTimeChecker ())
     .AddAttribute ("DeferTime", "TimeInterval to defer during CCA",
@@ -156,7 +156,7 @@ LbtAccessManager::GetTypeId (void)
                    MakeTimeAccessor (&LbtAccessManager::m_deferTime),
                    MakeTimeChecker ())
     .AddAttribute ("MinCw", "The minimum value of the contention window.",
-                   UintegerValue (16),
+                   UintegerValue (15),
                    MakeUintegerAccessor (&LbtAccessManager::m_cwMin),
                    MakeUintegerChecker<uint32_t> ())
     .AddAttribute ("MaxCw", "The maximum value of the contention window. For the priority class 3 this value is set to 63, and for priority class 4 it is 1023.",
@@ -165,27 +165,12 @@ LbtAccessManager::GetTypeId (void)
                    MakeUintegerChecker<uint32_t> ())
     .AddAttribute ("Txop",
                    "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (4)),
+                   TimeValue (MilliSeconds (8)),
                    MakeTimeAccessor (&LbtAccessManager::m_txop),
-                   MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
-    .AddAttribute ("MaxTxop",
-                   "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (24)),
-                   MakeTimeAccessor (&LbtAccessManager::m_txopmax),
-                   MakeTimeChecker (MilliSeconds (4), MilliSeconds (40)))
-    .AddAttribute ("MinTxop",
-                   "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (4)),
-                   MakeTimeAccessor (&LbtAccessManager::m_txopmin),
-                   MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
-    .AddAttribute ("AdaptiveTxop",
-                   "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (4)),
-                   MakeTimeAccessor (&LbtAccessManager::m_txopadaptive),
                    MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
     .AddAttribute ("UseReservationSignal",
                    "Whether to use a reservation signal when there is no data ready to be transmitted.",
-                   BooleanValue (false),
+                   BooleanValue (true),
                    MakeBooleanAccessor (&LbtAccessManager::m_reservationSignal),
                    MakeBooleanChecker ())
     .AddAttribute ("CwUpdateRule",
@@ -301,7 +286,7 @@ LbtAccessManager::SetWifiPhy (Ptr<SpectrumWifiPhy> phy)
   m_wifiPhy->SetAttribute ("DisableWifiReception", BooleanValue (true));
   m_wifiPhy->SetAttribute ("CcaMode1Threshold", DoubleValue (m_edThreshold));
   // Initialization of post-attribute-construction variables can be done here
-  m_cw = 16;
+  m_cw = m_cwMin;
 }
 
 void
@@ -535,17 +520,7 @@ LbtAccessManager::GetBackoffSlots ()
 {
   NS_LOG_FUNCTION (this);
   // Integer between 0 and m_cw
-  switch(m_cwUpdateRule)
-  {
-  case ALL_NACKS:
-  {
-    return (m_rng->GetInteger (m_cwMin-1,m_cw.Get ()));
-  }break;
-  default:
-  {
-   return (m_rng->GetInteger (m_cwMin-1,m_cw.Get ()));
-  }break;
-  }
+  return (m_rng->GetInteger (0, m_cw.Get ()));
 }
 
 void
@@ -655,31 +630,12 @@ LbtAccessManager::ResetCw (void)
 }
 
 void
-LbtAccessManager::UpdateFailedCw ()
+LbtAccessManager::UpdateFailedCw (void)
 {
   NS_LOG_FUNCTION (this);
   uint32_t oldValue = m_cw.Get ();
-  switch (m_cwUpdateRule)
-  {
-  case ANY_NACK:
-  { 
-    m_cw = m_cwMax;
-  }break;
-  case ALL_NACKS:
-  { 
-  cwtmp=m_cw.Get()+int(harqFeedbacktmp*m_cw.Get ());
-  m_cw = std::min (cwtmp , m_cwMax);
-  }break;
-   case NACKS_80_PERCENT:
-  {
-
-  }break;
-   case NACKS_10_PERCENT:
-  {
-
-  }break;
-  }         
-  NS_LOG_DEBUG ("CW updated from " << oldValue << " to " << m_cw );
+  m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMax);
+  NS_LOG_DEBUG ("CW updated from " << oldValue << " to " << m_cw);
   m_lastCWUpdateTime = Simulator::Now ();
 }
 
@@ -781,29 +737,14 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
     }
 
   bool updateFailedCw = false;
-  
+
   switch (m_cwUpdateRule)
         {
          case ALL_NACKS:
           {
-            harqFeedbacktmp=double(nackCounter)/(double)harqFeedback.size();
-            if (nackCounter> 0)
+            if (double(nackCounter)/(double)harqFeedback.size() == 1)
               {
                 updateFailedCw = true;
-                if(m_txop-MilliSeconds (double(nackCounter)/(double)harqFeedback.size()*5.0)<m_txopmin)
-                m_txop=m_txopmin;
-                else
-                m_txop -=MilliSeconds (double(nackCounter)/(double)harqFeedback.size()*5.0);
-              }
-            else
-              {
-                m_cw = m_cwMin;
-                if(m_txop +m_txopadaptive>m_txopmax)
-                m_txop=m_txopmax;
-                 else
-                 m_txop +=m_txopadaptive;
-          
-              
               }
           }
           break;
@@ -812,19 +753,7 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
             if (nackCounter > 0)
               {
                 updateFailedCw  = true;
-                if(m_txop -m_txopadaptive<m_txopmin)
-                m_txop=m_txopmin;
-                else
-                m_txop-=m_txopadaptive;
               }
-            else
-            { m_cwMin=32;
-              m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMin);
-              if(m_txop +m_txopadaptive>m_txopmax)
-                m_txop=m_txopmax;
-              else
-              m_txop +=m_txopadaptive;
-            }
           }
           break;
         case NACKS_80_PERCENT:
@@ -857,7 +786,6 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
 
   if (updateFailedCw)
     {
-     
       UpdateFailedCw ();
     }
   else

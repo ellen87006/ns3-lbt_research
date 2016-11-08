@@ -269,7 +269,7 @@ main (int argc, char *argv[])
   // This program has two operators, and nominally 4 cells per operator
   // and 5 UEs per cell.  These variables can be tuned below for
   // e.g. debugging on a smaller scale scenario
-  uint32_t numUePerCell = 10;
+  uint32_t numUePerCell = 5;
   uint32_t numCells = 4;
 
   // Some debugging settings not exposed as command line args are below
@@ -447,12 +447,12 @@ main (int argc, char *argv[])
   PhyParams phyParams;
   phyParams.m_bsTxGain = 5; // dB antenna gain
   phyParams.m_bsRxGain = 5; // dB antenna gain
-  phyParams.m_bsTxPower = 23; // dBm
+  phyParams.m_bsTxPower = 18; // dBm
   phyParams.m_bsNoiseFigure = 5; // dB
   phyParams.m_ueTxGain = 0; // dB antenna gain
   phyParams.m_ueRxGain = 0; // dB antenna gain
-  phyParams.m_ueTxPower = 23; // dBm
-  phyParams.m_ueNoiseFigure = 5; // dB
+  phyParams.m_ueTxPower = 18; // dBm
+  phyParams.m_ueNoiseFigure = 9; // dB
 
   ConfigureAndRunScenario (cellConfigA, cellConfigB, bsNodesA, bsNodesB, ueNodesA, ueNodesB, phyParams, durationTime, transport, indoorLossModel, disableApps, lteDutyCycle, generateRem, outputDir + "/laa_wifi_indoor_" + simTag, simulationParams.str ());
 
