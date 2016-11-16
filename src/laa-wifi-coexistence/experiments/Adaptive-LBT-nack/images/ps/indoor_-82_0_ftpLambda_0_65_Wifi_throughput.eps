@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: images/ps/indoor_-82_0_ftpLambda_0_65_Wifi_throughput.eps
-%%Creator: gnuplot 5.0 patchlevel 3
-%%CreationDate: Thu Nov  3 00:20:45 2016
+%%Creator: gnuplot 4.6 patchlevel 6
+%%CreationDate: Thu Nov 10 09:37:44 2016
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 302
 %%EndComments
@@ -18,7 +18,6 @@ gnudict begin
 /Dashlength 1 def
 /Landscape false def
 /Level1 false def
-/Level3 false def
 /Rounded false def
 /ClipToBoundingBox false def
 /SuppressPDFMark false def
@@ -30,11 +29,11 @@ gnudict begin
 %
 /vshift -46 def
 /dl1 {
-  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  10.0 Dashlength mul mul
   Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
 } def
 /dl2 {
-  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  10.0 Dashlength mul mul
   Rounded { currentlinewidth 0.75 mul add } if
 } def
 /hpt_ 31.5 def
@@ -48,7 +47,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 5.1 (Oct 2015)
+% Gnuplot Prolog Version 4.6 (September 2012)
 %
 %/SuppressPDFMark true def
 %
@@ -65,11 +64,11 @@ gnudict begin
 /vpt2 vpt 2 mul def
 /hpt2 hpt 2 mul def
 /Lshow {currentpoint stroke M 0 vshift R 
-	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
 /Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
-	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
 /Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
-	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
 /UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
   /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
 /DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
@@ -83,7 +82,7 @@ gnudict begin
 /PL {stroke userlinewidth setlinewidth
 	Rounded {1 setlinejoin 1 setlinecap} if} def
 3.8 setmiterlimit
-% Classic Line colors (version 5.0)
+% Default Line colors
 /LCw {1 1 1} def
 /LCb {0 0 0} def
 /LCa {0 0 0} def
@@ -96,21 +95,19 @@ gnudict begin
 /LC6 {0 0 0} def
 /LC7 {1 0.3 0} def
 /LC8 {0.5 0.5 0.5} def
-% Default dash patterns (version 5.0)
-/LTB {BL [] LCb DL} def
+% Default Line Types
 /LTw {PL [] 1 setgray} def
-/LTb {PL [] LCb DL} def
+/LTb {BL [] LCb DL} def
 /LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
 /LT0 {PL [] LC0 DL} def
-/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
-/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
-/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
-/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
-/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
-/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
-/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
-/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
-/SL {[] 0 setdash} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
 /Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
 /Dia {stroke [] 0 setdash 2 copy vpt add M
   hpt neg vpt neg V hpt vpt neg V
@@ -332,14 +329,9 @@ gnudict begin
 %
 /languagelevel where
  {pop languagelevel} {1} ifelse
-dup 2 lt
-	{/InterpretLevel1 true def
-	 /InterpretLevel3 false def}
-	{/InterpretLevel1 Level1 def
-	 2 gt
-	    {/InterpretLevel3 Level3 def}
-	    {/InterpretLevel3 false def}
-	 ifelse }
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
  ifelse
 %
 % PostScript level 2 pattern fill definitions
@@ -428,17 +420,16 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 /Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
-%
 /MFshow {
    { dup 5 get 3 ge
      { 5 get 3 eq {gsave} {grestore} ifelse }
      {dup dup 0 get findfont exch 1 get scalefont setfont
      [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
-     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
      {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
      get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
      dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
-     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
      pop aload pop M} ifelse }ifelse }ifelse }
      ifelse }
    forall} def
@@ -466,42 +457,14 @@ systemdict /pdfmark known not {
 SDict begin [
   /Title (images/ps/indoor_-82_0_ftpLambda_0_65_Wifi_throughput.eps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 5.0 patchlevel 3)
+  /Creator (gnuplot 4.6 patchlevel 6)
   /Author (sovietreborn)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Thu Nov  3 00:20:45 2016)
+  /CreationDate (Thu Nov 10 09:37:44 2016)
   /DOCINFO pdfmark
 end
 } ifelse
-%
-% Support for boxed text - Ethan A Merritt May 2005
-%
-/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
-           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
-	   /Boxing true def } def
-/ExtendTextBox { Boxing
-    { gsave dup false charpath pathbbox
-      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
-      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
-      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
-      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
-      grestore } if } def
-/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
-               TBx1 TBxmargin sub TBy2 TBymargin add L
-	       TBx2 TBxmargin add TBy2 TBymargin add L
-	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
-/DrawTextBox { PopTextBox stroke /Boxing false def} def
-/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
-0 0 0 0 InitTextBox
-/TBxmargin 20 def
-/TBymargin 20 def
-/Boxing false def
-/textshow { ExtendTextBox Gshow } def
-%
-% redundant definitions for compatibility with prologue.ps older than 5.0.2
-/LTB {BL [] LCb DL} def
-/LTb {PL [] LCb DL} def
 end
 %%EndProlog
 %%Page: 1 1
@@ -517,13 +480,12 @@ BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 448 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 448 M
@@ -537,13 +499,14 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 1080 M
-6261 0 V
+3699 0 V
+2478 0 R
+84 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 1080 M
@@ -557,13 +520,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 1712 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 1712 M
@@ -577,13 +539,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 2344 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 2344 M
@@ -597,13 +558,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 2975 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 2975 M
@@ -617,13 +577,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 3607 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 3607 M
@@ -637,13 +596,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 4239 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 4239 M
@@ -657,13 +615,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 4871 M
 6261 0 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 4871 M
@@ -677,13 +634,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 686 448 M
 0 4423 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 686 448 M
@@ -697,13 +653,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 1938 448 M
 0 4423 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 1938 448 M
@@ -717,13 +672,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 3190 448 M
 0 4423 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 3190 448 M
@@ -737,13 +691,14 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 4443 448 M
-0 4423 V
+0 63 V
+0 628 R
+0 3732 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 4443 448 M
@@ -757,15 +712,14 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 5695 448 M
 0 63 V
-0 560 R
-0 3800 V
+0 628 R
+0 3732 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 5695 448 M
@@ -779,13 +733,12 @@ stroke
 1.000 UL
 LTb
 LCb setrgbcolor
-0.500 UL
+1.000 UL
 LTa
 LCa setrgbcolor
 6947 448 M
 0 4423 V
 stroke
-1.000 UL
 LTb
 LCb setrgbcolor
 6947 448 M
@@ -800,7 +753,7 @@ stroke
 LTb
 LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 686 4871 N
 686 448 L
@@ -808,10 +761,6 @@ LCb setrgbcolor
 0 4423 V
 -6261 0 V
 Z stroke
-2.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
 LCb setrgbcolor
 112 2659 M
 currentpoint gsave translate -270 rotate 0 0 moveto
@@ -821,196 +770,277 @@ grestore
 LTb
 LCb setrgbcolor
 3816 98 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Flow number  CDF)]
+[ [(Helvetica) 140.0 0.0 true true 0 (CDF)]
 ] -46.7 MCshow
 LTb
+2.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
 % Begin plot #1
 2.000 UP
 1.000 UL
-LTb
-0.58 0.00 0.83 C LCb setrgbcolor
-6296 1001 M
+LT0
+LC0 setrgbcolor
+LCb setrgbcolor
+6233 1061 M
 [ [(Helvetica) 140.0 0.0 true true 0 (Before rule operator A)]
 ] -46.7 MRshow
-2.000 UP
-1.000 UL
-LTb
-0.58 0.00 0.83 C 6380 1001 M
-399 0 V
-6579 1001 Box
+LT0
+6317 1061 M
+462 0 V
+6548 1061 Box
 % End plot #1
 % Begin plot #2
 2.000 UP
 1.000 UL
-LTb
-0.00 0.62 0.45 C LCb setrgbcolor
-6296 861 M
+LT1
+LC1 setrgbcolor
+LCb setrgbcolor
+6233 904 M
 [ [(Helvetica) 140.0 0.0 true true 0 (NACK rule operator A)]
 ] -46.7 MRshow
-2.000 UP
-1.000 UL
-LTb
-0.00 0.62 0.45 C 6380 861 M
-399 0 V
-6579 861 CircleF
+LT1
+6317 904 M
+462 0 V
+6548 904 CircleF
 % End plot #2
 % Begin plot #3
 2.000 UP
 1.000 UL
-LTb
-0.34 0.71 0.91 C LCb setrgbcolor
-6296 721 M
+LT2
+LC2 setrgbcolor
+LCb setrgbcolor
+6233 747 M
 [ [(Helvetica) 140.0 0.0 true true 0 (Before rule operator B)]
 ] -46.7 MRshow
-2.000 UP
-1.000 UL
-LTb
-0.34 0.71 0.91 C 6380 721 M
-399 0 V
-1293 448 M
-152 1480 V
-190 113 V
-189 170 V
-190 26 V
-190 55 V
-189 6 V
-190 29 V
-190 10 V
-189 2 V
-190 1 V
-190 2 V
-190 5 V
-189 7 V
-191 29 V
-189 6 V
-190 23 V
-190 1 V
-190 4 V
-189 1 V
-190 1 V
-190 28 V
-189 2 V
-190 4 V
-190 1 V
-189 15 V
-190 37 V
-190 14 V
-190 16 V
-189 18 V
-190 65 V
-1445 1928 Star
-1635 2041 Star
-1824 2211 Star
-2014 2237 Star
-2204 2292 Star
-2393 2298 Star
-2583 2327 Star
-2773 2337 Star
-2962 2339 Star
-3152 2340 Star
-3342 2342 Star
-3532 2347 Star
-3721 2354 Star
-3912 2383 Star
-4101 2389 Star
-4291 2412 Star
-4481 2413 Star
-4671 2417 Star
-4860 2418 Star
-5050 2419 Star
-5240 2447 Star
-5429 2449 Star
-5619 2453 Star
-5809 2454 Star
-5998 2469 Star
-6188 2506 Star
-6378 2520 Star
-6568 2536 Star
-6757 2554 Star
-6947 2619 Star
-6579 721 Star
+LT2
+6317 747 M
+462 0 V
+1585 448 M
+56 165 V
+106 108 V
+106 6 V
+106 16 V
+106 65 V
+107 867 V
+106 815 V
+106 252 V
+106 7 V
+106 4 V
+106 19 V
+106 4 V
+106 6 V
+107 2 V
+106 4 V
+106 29 V
+106 157 V
+106 1 V
+106 24 V
+106 0 V
+106 3 V
+107 10 V
+106 2 V
+106 10 V
+106 9 V
+106 5 V
+106 2 V
+106 4 V
+106 1 V
+107 12 V
+106 2 V
+106 1 V
+106 3 V
+106 2 V
+106 0 V
+106 0 V
+106 1 V
+107 2 V
+106 2 V
+106 3 V
+106 1 V
+106 1 V
+106 2 V
+106 4 V
+106 1 V
+107 2 V
+106 8 V
+106 3 V
+106 9 V
+106 10 V
+106 71 V
+1641 613 Star
+1747 721 Star
+1853 727 Star
+1959 743 Star
+2065 808 Star
+2172 1675 Star
+2278 2490 Star
+2384 2742 Star
+2490 2749 Star
+2596 2753 Star
+2702 2772 Star
+2808 2776 Star
+2914 2782 Star
+3021 2784 Star
+3127 2788 Star
+3233 2817 Star
+3339 2974 Star
+3445 2975 Star
+3551 2999 Star
+3657 2999 Star
+3763 3002 Star
+3870 3012 Star
+3976 3014 Star
+4082 3024 Star
+4188 3033 Star
+4294 3038 Star
+4400 3040 Star
+4506 3044 Star
+4612 3045 Star
+4719 3057 Star
+4825 3059 Star
+4931 3060 Star
+5037 3063 Star
+5143 3065 Star
+5249 3065 Star
+5355 3065 Star
+5461 3066 Star
+5568 3068 Star
+5674 3070 Star
+5780 3073 Star
+5886 3074 Star
+5992 3075 Star
+6098 3077 Star
+6204 3081 Star
+6310 3082 Star
+6417 3084 Star
+6523 3092 Star
+6629 3095 Star
+6735 3104 Star
+6841 3114 Star
+6947 3185 Star
+6548 747 Star
 % End plot #3
 % Begin plot #4
 2.000 UP
 1.000 UL
-LTb
-0.90 0.62 0.00 C LCb setrgbcolor
-6296 581 M
+LT3
+LC3 setrgbcolor
+LCb setrgbcolor
+6233 590 M
 [ [(Helvetica) 140.0 0.0 true true 0 (NACK rule operator B)]
 ] -46.7 MRshow
-2.000 UP
-1.000 UL
-LTb
-0.90 0.62 0.00 C 6380 581 M
-399 0 V
-1293 448 M
-152 1480 V
-190 113 V
-189 170 V
-190 26 V
-190 55 V
-189 6 V
-190 29 V
-190 10 V
-189 2 V
-190 1 V
-190 2 V
-190 5 V
-189 7 V
-191 29 V
-189 6 V
-190 23 V
-190 1 V
-190 4 V
-189 1 V
-190 1 V
-190 28 V
-189 2 V
-190 4 V
-190 1 V
-189 15 V
-190 37 V
-190 14 V
-190 16 V
-189 18 V
-190 65 V
-1445 1928 Box
-1635 2041 Box
-1824 2211 Box
-2014 2237 Box
-2204 2292 Box
-2393 2298 Box
-2583 2327 Box
-2773 2337 Box
-2962 2339 Box
-3152 2340 Box
-3342 2342 Box
-3532 2347 Box
-3721 2354 Box
-3912 2383 Box
-4101 2389 Box
-4291 2412 Box
-4481 2413 Box
-4671 2417 Box
-4860 2418 Box
-5050 2419 Box
-5240 2447 Box
-5429 2449 Box
-5619 2453 Box
-5809 2454 Box
-5998 2469 Box
-6188 2506 Box
-6378 2520 Box
-6568 2536 Box
-6757 2554 Box
-6947 2619 Box
-6579 581 Box
+LT3
+6317 590 M
+462 0 V
+1585 448 M
+56 165 V
+106 108 V
+106 6 V
+106 16 V
+106 65 V
+107 867 V
+106 815 V
+106 252 V
+106 7 V
+106 4 V
+106 19 V
+106 4 V
+106 6 V
+107 2 V
+106 4 V
+106 29 V
+106 157 V
+106 1 V
+106 24 V
+106 0 V
+106 3 V
+107 10 V
+106 2 V
+106 10 V
+106 9 V
+106 5 V
+106 2 V
+106 4 V
+106 1 V
+107 12 V
+106 2 V
+106 1 V
+106 3 V
+106 2 V
+106 0 V
+106 0 V
+106 1 V
+107 2 V
+106 2 V
+106 3 V
+106 1 V
+106 1 V
+106 2 V
+106 4 V
+106 1 V
+107 2 V
+106 8 V
+106 3 V
+106 9 V
+106 10 V
+106 71 V
+1641 613 Box
+1747 721 Box
+1853 727 Box
+1959 743 Box
+2065 808 Box
+2172 1675 Box
+2278 2490 Box
+2384 2742 Box
+2490 2749 Box
+2596 2753 Box
+2702 2772 Box
+2808 2776 Box
+2914 2782 Box
+3021 2784 Box
+3127 2788 Box
+3233 2817 Box
+3339 2974 Box
+3445 2975 Box
+3551 2999 Box
+3657 2999 Box
+3763 3002 Box
+3870 3012 Box
+3976 3014 Box
+4082 3024 Box
+4188 3033 Box
+4294 3038 Box
+4400 3040 Box
+4506 3044 Box
+4612 3045 Box
+4719 3057 Box
+4825 3059 Box
+4931 3060 Box
+5037 3063 Box
+5143 3065 Box
+5249 3065 Box
+5355 3065 Box
+5461 3066 Box
+5568 3068 Box
+5674 3070 Box
+5780 3073 Box
+5886 3074 Box
+5992 3075 Box
+6098 3077 Box
+6204 3081 Box
+6310 3082 Box
+6417 3084 Box
+6523 3092 Box
+6629 3095 Box
+6735 3104 Box
+6841 3114 Box
+6947 3185 Box
+6548 590 Box
 % End plot #4
-2.000 UL
-LTb
-LCb setrgbcolor
 1.000 UL
-LTB
+LTb
 LCb setrgbcolor
 686 4871 N
 686 448 L

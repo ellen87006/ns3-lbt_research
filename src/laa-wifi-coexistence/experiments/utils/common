@@ -24,13 +24,16 @@ print_operator_laa_wifi ()
 {	
     case $rules  in
   	any)
-	    echo "Before rule operator $OPERATOR"	
+	    echo "Before rule operator $cell"	
 	    ;;
   	all)
-	    echo "NACK rule operator $OPERATOR"	
+	    echo "NACK rule operator $cell"	
 	    ;;
-	  *)
-	    echo "haha operator $OPERATOR"
+	nacks10)
+	    echo "LBT operator $cell"
+	    ;;
+   	nacks80)
+	    echo "LBT fixed operator $cell"
 	    ;;
     esac
 }

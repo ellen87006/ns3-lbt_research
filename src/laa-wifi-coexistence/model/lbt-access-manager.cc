@@ -152,11 +152,11 @@ LbtAccessManager::GetTypeId (void)
                    MakeTimeAccessor (&LbtAccessManager::m_slotTime),
                    MakeTimeChecker ())
     .AddAttribute ("DeferTime", "TimeInterval to defer during CCA",
-                   TimeValue (MicroSeconds (43)),
+                   TimeValue (MicroSeconds (34)),
                    MakeTimeAccessor (&LbtAccessManager::m_deferTime),
                    MakeTimeChecker ())
     .AddAttribute ("MinCw", "The minimum value of the contention window.",
-                   UintegerValue (15),
+                   UintegerValue (16),
                    MakeUintegerAccessor (&LbtAccessManager::m_cwMin),
                    MakeUintegerChecker<uint32_t> ())
     .AddAttribute ("MaxCw", "The maximum value of the contention window. For the priority class 3 this value is set to 63, and for priority class 4 it is 1023.",
@@ -165,12 +165,27 @@ LbtAccessManager::GetTypeId (void)
                    MakeUintegerChecker<uint32_t> ())
     .AddAttribute ("Txop",
                    "Duration of channel access grant.",
-                   TimeValue (MilliSeconds (8)),
+                   TimeValue (MilliSeconds (4)),
                    MakeTimeAccessor (&LbtAccessManager::m_txop),
+                   MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
+    .AddAttribute ("MaxTxop",
+                   "Duration of channel access grant.",
+                   TimeValue (MilliSeconds (14)),
+                   MakeTimeAccessor (&LbtAccessManager::m_txopmax),
+                   MakeTimeChecker (MilliSeconds (4), MilliSeconds (40)))
+    .AddAttribute ("MinTxop",
+                   "Duration of channel access grant.",
+                   TimeValue (MilliSeconds (4)),
+                   MakeTimeAccessor (&LbtAccessManager::m_txopmin),
+                   MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
+    .AddAttribute ("AdaptiveTxop",
+                   "Duration of channel access grant.",
+                   TimeValue (MilliSeconds (4)),
+                   MakeTimeAccessor (&LbtAccessManager::m_txopadaptive),
                    MakeTimeChecker (MilliSeconds (4), MilliSeconds (20)))
     .AddAttribute ("UseReservationSignal",
                    "Whether to use a reservation signal when there is no data ready to be transmitted.",
-                   BooleanValue (true),
+                   BooleanValue (false),
                    MakeBooleanAccessor (&LbtAccessManager::m_reservationSignal),
                    MakeBooleanChecker ())
     .AddAttribute ("CwUpdateRule",
@@ -286,7 +301,7 @@ LbtAccessManager::SetWifiPhy (Ptr<SpectrumWifiPhy> phy)
   m_wifiPhy->SetAttribute ("DisableWifiReception", BooleanValue (true));
   m_wifiPhy->SetAttribute ("CcaMode1Threshold", DoubleValue (m_edThreshold));
   // Initialization of post-attribute-construction variables can be done here
-  m_cw = m_cwMin;
+  m_cw = 16;
 }
 
 void
@@ -520,7 +535,26 @@ LbtAccessManager::GetBackoffSlots ()
 {
   NS_LOG_FUNCTION (this);
   // Integer between 0 and m_cw
-  return (m_rng->GetInteger (0, m_cw.Get ()));
+  switch(m_cwUpdateRule)
+  {
+    case ANY_NACK:
+  {
+    return m_cw.Get ();
+  }break;
+  case NACKS_80_PERCENT:
+  {
+    return (m_cwMin+m_cwMax)/2;
+  }break;
+  case NACKS_10_PERCENT:
+  {
+    return (m_rng->GetInteger (m_cwMin,m_cwMax));
+  }break;
+  default:
+  {
+   //return (m_rng->GetInteger ((m_cwMin-1),m_cw.Get ()));
+   return m_cw.Get ();
+  }break;
+  }
 }
 
 void
@@ -630,12 +664,31 @@ LbtAccessManager::ResetCw (void)
 }
 
 void
-LbtAccessManager::UpdateFailedCw (void)
+LbtAccessManager::UpdateFailedCw (double UpdateFailedCwnum)
 {
   NS_LOG_FUNCTION (this);
-  uint32_t oldValue = m_cw.Get ();
-  m_cw = std::min ( 2 * (m_cw.Get () + 1) - 1, m_cwMax);
-  NS_LOG_DEBUG ("CW updated from " << oldValue << " to " << m_cw);
+  uint32_t  oldValue = m_cw.Get ();
+  switch (m_cwUpdateRule)
+  {
+  case ANY_NACK:
+  { 
+    m_cw = m_cwMax;
+  }break;
+  case ALL_NACKS:
+  { 
+  cwtmp=m_cw.Get()+int(UpdateFailedCwnum*m_cw.Get ());
+  m_cw = std::min (cwtmp , m_cwMax);
+  }   break;
+   case NACKS_80_PERCENT:
+  {
+
+  }break;
+   case NACKS_10_PERCENT:
+  {
+
+  }break;
+  }         
+  NS_LOG_DEBUG ("CW updated from " << oldValue << " to " << m_cw );
   m_lastCWUpdateTime = Simulator::Now ();
 }
 
@@ -737,14 +790,29 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
     }
 
   bool updateFailedCw = false;
-
+  harqFeedbacktmp=double(nackCounter)/(double)harqFeedback.size();
   switch (m_cwUpdateRule)
         {
+
          case ALL_NACKS:
           {
-            if (double(nackCounter)/(double)harqFeedback.size() == 1)
+            if (nackCounter> 0)
               {
                 updateFailedCw = true;
+                if(m_txop-MilliSeconds (double(nackCounter)/(double)harqFeedback.size()*5.0)<m_txopmin)
+                m_txop=m_txopmin;
+                else
+                m_txop -=MilliSeconds (double(nackCounter)/(double)harqFeedback.size()*5.0);
+              }
+            else
+              {
+                m_cw = m_cwMin;
+                if(m_txop +m_txopadaptive>m_txopmax)
+                m_txop=m_txopmax;
+                 else
+                 m_txop +=m_txopadaptive;
+          
+              
               }
           }
           break;
@@ -753,28 +821,29 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
             if (nackCounter > 0)
               {
                 updateFailedCw  = true;
+                if(m_txop -m_txopadaptive<m_txopmin)
+                m_txop=m_txopmin;
+                else
+                m_txop-=m_txopadaptive;
               }
+            else
+            { m_cwMin=32;
+              m_cw = 32;
+              if(m_txop +m_txopadaptive>m_txopmax)
+                m_txop=m_txopmax;
+              else
+              m_txop +=m_txopadaptive;
+            }
           }
           break;
         case NACKS_80_PERCENT:
           {
-            if (double(nackCounter)/(double)harqFeedback.size() >= 0.8)
-              {
-                updateFailedCw = true;
-                NS_LOG_INFO ("CW will be updated, since NACKs are greater than 80%");
-              }
-           else
-             {
-                NS_LOG_INFO ("CW will not be updated, since NACKs are less than 80%");
-             }
+              updateFailedCw = false;
           }
           break;
         case NACKS_10_PERCENT:
           {
-            if (double(nackCounter)/(double)harqFeedback.size() >= 0.1)
-              {
-                updateFailedCw = true;
-              }
+              updateFailedCw = false;
           }
           break;
         default:
@@ -786,7 +855,8 @@ LbtAccessManager::UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> m_dlInfo
 
   if (updateFailedCw)
     {
-      UpdateFailedCw ();
+     
+      UpdateFailedCw (harqFeedbacktmp);
     }
   else
     {

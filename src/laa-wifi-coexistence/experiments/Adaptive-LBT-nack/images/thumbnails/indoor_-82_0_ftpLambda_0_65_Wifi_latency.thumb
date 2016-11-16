@@ -1,6 +1,6 @@
 <div class="plot">
     <a class="thumbnail" href="../png/indoor_-82_0_ftpLambda_0_65_Wifi_latency.png">
-      <img src="indoor_-82_0_ftpLambda_0_65_Wifi_latency.png" alt="FtpLambda=0.65, CellA=Wifi, UDP  Latency [ms] Flow number CDF " width="200" height="150" />
+      <img src="indoor_-82_0_ftpLambda_0_65_Wifi_latency.png" alt="FtpLambda=0.65, CellA=Wifi, UDP  Latency [ms] CDF " width="200" height="150" />
     </a>
     <div class="resource">
      eps: 

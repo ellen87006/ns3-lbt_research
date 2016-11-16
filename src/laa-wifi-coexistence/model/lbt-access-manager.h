@@ -116,7 +116,7 @@ private:
   void TransitionToBusy (Time duration);
   void TransitionFromBusy ();
   uint32_t GetBackoffSlots ();
-  void UpdateFailedCw ();
+  void UpdateFailedCw (double UpdateFailedCwnum);
   void UpdateCwBasedOnHarq (std::vector<DlInfoListElement_s> harqFeedback);
   void SetGrant();
 
@@ -132,12 +132,17 @@ private:
   Time m_deferTime;
   uint32_t m_cwMin;
   uint32_t m_cwMax;
+  double harqFeedbacktmp;
+  uint32_t cwtmp;
   TracedValue<uint32_t> m_cw;
   TracedValue<uint32_t> m_currentBackoffSlots;  // last value drawn for backoff
   uint32_t m_backoffCount;  // counter for current backoff remaining
   bool m_grantRequested;
   Ptr<UniformRandomVariable> m_rng;
   Time m_txop;
+  Time m_txopmin;
+  Time m_txopmax;
+  Time m_txopadaptive;
   bool m_reservationSignal;
   EventId m_waitForDeferEventId;
   EventId m_waitForBackoffEventId;
