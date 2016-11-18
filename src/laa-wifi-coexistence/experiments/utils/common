@@ -24,16 +24,16 @@ print_operator_laa_wifi ()
 {	
     case $rules  in
   	any)
-	    echo "Adaptive rule Operator $cell"	
+	    echo "Adaptive rule Operator $opr"	
 	    ;;
   	all)
-	    echo "NACK rule Operator $cell"	
+	    echo "NACK rule Operator $opr"	
 	    ;;
 	nacks10)
-	    echo "LBT Cat 4 Operator $cell"
+	    echo "LBT Cat 4 Operator $opr"
 	    ;;
    	nacks80)
-	    echo "Fixed LBT Cat 4  Operator $cell"
+	    echo "Fixed LBT Cat 4  Operator $opr"
 	    ;;
     esac
 }

@@ -37,7 +37,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
            # if ! [ -f $FILE_TO_TEST ] ; then
                 
             #    continue
-
+            opr=Laa
         #    fi 
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorA" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
@@ -122,7 +122,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
            # if ! [ -f $FILE_TO_TEST ] ; then
                 
             #    continue
-
+            opr=Laa
         #    fi 
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorA" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
@@ -199,7 +199,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             # Some variants may not be present; skip those cases
             FILE_TO_TEST=results/laa_wifi_indoor_${simTag}_rule_any_operatorB
            # if ! [ -f $FILE_TO_TEST ] ; then
-                
+               opr=Wifi 
             #    continue
 
         #    fi 
@@ -230,7 +230,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
                 `../utils/cdf.sh $LATENCY_COLUMN $CURRENT > results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_B`
             done
             done
-            
+            opr=Wifi
             index=0        
                 for cell in  Laa ; do 
                 for rules in all any nacks10 nacks80; do 
@@ -284,7 +284,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             # Some variants may not be present; skip those cases
             FILE_TO_TEST=results/laa_wifi_indoor_${simTag}_rule_any_operatorB
            # if ! [ -f $FILE_TO_TEST ] ; then
-                
+                opr=Wifi
             #    continue
 
         #    fi 
