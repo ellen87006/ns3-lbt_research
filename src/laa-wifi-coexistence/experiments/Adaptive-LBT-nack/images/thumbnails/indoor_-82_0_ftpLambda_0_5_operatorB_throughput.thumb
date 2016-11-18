@@ -1,6 +1,6 @@
 <div class="plot">
     <a class="thumbnail" href="../png/indoor_-82_0_ftpLambda_0_5_operatorB_throughput.png">
-      <img src="indoor_-82_0_ftpLambda_0_5_operatorB_throughput.png" alt="EdThresh=-82.0, FtpLambda=0.5, CellA=Wifi, UDP  throughput [mb] Flow number CDF " width="200" height="150" />
+      <img src="indoor_-82_0_ftpLambda_0_5_operatorB_throughput.png" alt="FtpLambda=0.5, CellA=Wifi  throughput [Mbps] Flow number CDF " width="200" height="150" />
     </a>
     <div class="resource">
      eps: 

@@ -306,8 +306,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-interface-address.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-interface-address.cc.1.o", 
-    "file": "../src/internet/model/ipv4-interface-address.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/lte-test-phy-error-model.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/lte-test-phy-error-model.cc.3.o", 
+    "file": "../src/lte/test/lte-test-phy-error-model.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -478,11 +478,6 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/internet -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/internet/test\"' ../src/internet/test/tcp-cong-avoid-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/test/tcp-cong-avoid-test.cc.3.o", 
     "file": "../src/internet/test/tcp-cong-avoid-test.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mesh/model/dot11s/peer-link-frame.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mesh/model/dot11s/peer-link-frame.cc.1.o", 
-    "file": "../src/mesh/model/dot11s/peer-link-frame.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -876,6 +871,11 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-vendor-specific-parameters.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-vendor-specific-parameters.cc.1.o", 
+    "file": "../src/lte/model/lte-vendor-specific-parameters.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DTAP_DEV_CREATOR=\"ns3-dev-tap-device-creator-optimized\"' '-DRAW_SOCK_CREATOR=\"ns3-dev-raw-sock-creator-optimized\"' ../src/fd-net-device/model/fd-net-device.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/fd-net-device/model/fd-net-device.cc.1.o", 
     "file": "../src/fd-net-device/model/fd-net-device.cc"
   }, 
@@ -1001,8 +1001,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tutorial/hello-simulator.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/tutorial/hello-simulator.cc.1.o", 
-    "file": "../examples/tutorial/hello-simulator.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/model/vsa-manager.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wave/model/vsa-manager.cc.1.o", 
+    "file": "../src/wave/model/vsa-manager.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -1033,6 +1033,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/wifi -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/wifi/test\"' ../src/wifi/test/wifi-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/test/wifi-test.cc.3.o", 
     "file": "../src/wifi/test/wifi-test.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mobility/model/waypoint-mobility-model.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mobility/model/waypoint-mobility-model.cc.1.o", 
+    "file": "../src/mobility/model/waypoint-mobility-model.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -1471,8 +1476,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/helper/udp-echo-helper.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/applications/helper/udp-echo-helper.cc.1.o", 
-    "file": "../src/applications/helper/udp-echo-helper.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/rraa-wifi-manager.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/model/rraa-wifi-manager.cc.1.o", 
+    "file": "../src/wifi/model/rraa-wifi-manager.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2091,11 +2096,6 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/cid-factory.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/model/cid-factory.cc.1.o", 
-    "file": "../src/wimax/model/cid-factory.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-spectrum-value-helper.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-spectrum-value-helper.cc.1.o", 
     "file": "../src/lte/model/lte-spectrum-value-helper.cc"
   }, 
@@ -2416,8 +2416,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
-    "file": "../src/lte/model/lte-enb-phy-sap.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/main-random-variable.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/examples/main-random-variable.cc.4.o", 
+    "file": "../src/core/examples/main-random-variable.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2476,11 +2476,6 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/rate-adaptation-distance.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/wireless/rate-adaptation-distance.cc.22.o", 
-    "file": "../examples/wireless/rate-adaptation-distance.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4.cc.1.o", 
     "file": "../src/internet/model/ipv4.cc"
   }, 
@@ -2533,6 +2528,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/examples/lena-rlc-traces.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/examples/lena-rlc-traces.cc.9.o", 
     "file": "../src/lte/examples/lena-rlc-traces.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/qos-utils.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/model/qos-utils.cc.1.o", 
+    "file": "../src/wifi/model/qos-utils.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2691,8 +2691,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/aodv -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/aodv/test\"' ../src/aodv/test/bug-772.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/aodv/test/bug-772.cc.3.o", 
-    "file": "../src/aodv/test/bug-772.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mpi/model/null-message-simulator-impl.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mpi/model/null-message-simulator-impl.cc.1.o", 
+    "file": "../src/mpi/model/null-message-simulator-impl.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2706,11 +2706,6 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-ue-power-control.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-ue-power-control.cc.1.o", 
-    "file": "../src/lte/model/lte-ue-power-control.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/olsr -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/olsr/test\"' ../src/olsr/test/tc-regression-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/olsr/test/tc-regression-test.cc.3.o", 
     "file": "../src/olsr/test/tc-regression-test.cc"
   }, 
@@ -2718,6 +2713,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/examples/dsr.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/dsr/examples/dsr.cc.1.o", 
     "file": "../src/dsr/examples/dsr.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/stats/wifi-example-sim.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/stats/wifi-example-sim.cc.1.o", 
+    "file": "../examples/stats/wifi-example-sim.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2743,16 +2743,6 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/stats/examples/double-probe-example.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/stats/examples/double-probe-example.cc.2.o", 
     "file": "../src/stats/examples/double-probe-example.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../scratch/scratch-simulator.cc -c -o /home/sovietreborn/ns3-lbt_research/build/scratch/scratch-simulator.cc.1.o", 
-    "file": "../scratch/scratch-simulator.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/test-epc-tft-classifier.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/test-epc-tft-classifier.cc.3.o", 
-    "file": "../src/lte/test/test-epc-tft-classifier.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2808,6 +2798,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/stats/examples/file-helper-example.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/stats/examples/file-helper-example.cc.7.o", 
     "file": "../src/stats/examples/file-helper-example.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-static-routing.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-static-routing.cc.1.o", 
+    "file": "../src/internet/model/ipv4-static-routing.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -2901,6 +2896,11 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/internet -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/internet/test\"' ../src/internet/test/ipv4-packet-info-tag-test-suite.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/test/ipv4-packet-info-tag-test-suite.cc.3.o", 
+    "file": "../src/internet/test/ipv4-packet-info-tag-test-suite.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/list-scheduler.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/list-scheduler.cc.1.o", 
     "file": "../src/core/model/list-scheduler.cc"
   }, 
@@ -2916,8 +2916,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/internet -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/internet/test\"' ../src/internet/test/ipv4-packet-info-tag-test-suite.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/test/ipv4-packet-info-tag-test-suite.cc.3.o", 
-    "file": "../src/internet/test/ipv4-packet-info-tag-test-suite.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/aodv -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/aodv/test\"' ../src/aodv/test/bug-772.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/aodv/test/bug-772.cc.3.o", 
+    "file": "../src/aodv/test/bug-772.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -3006,8 +3006,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/sample-random-variable-stream.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/examples/sample-random-variable-stream.cc.7.o", 
-    "file": "../src/core/examples/sample-random-variable-stream.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/buildings -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/buildings/test\"' ../src/buildings/test/building-position-allocator-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/buildings/test/building-position-allocator-test.cc.3.o", 
+    "file": "../src/buildings/test/building-position-allocator-test.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -3171,11 +3171,6 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/lte-test-phy-error-model.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/lte-test-phy-error-model.cc.3.o", 
-    "file": "../src/lte/test/lte-test-phy-error-model.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/packet-data-calculators.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/utils/packet-data-calculators.cc.1.o", 
     "file": "../src/network/utils/packet-data-calculators.cc"
   }, 
@@ -3193,6 +3188,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/uan/model/uan-prop-model-thorp.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/uan/model/uan-prop-model-thorp.cc.1.o", 
     "file": "../src/uan/model/uan-prop-model-thorp.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/lte-test-fdmt-ff-mac-scheduler.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/lte-test-fdmt-ff-mac-scheduler.cc.3.o", 
+    "file": "../src/lte/test/lte-test-fdmt-ff-mac-scheduler.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -3581,6 +3581,11 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/bridge/examples/csma-bridge.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/bridge/examples/csma-bridge.cc.1.o", 
+    "file": "../src/bridge/examples/csma-bridge.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../utils/bench-simulator.cc -c -o /home/sovietreborn/ns3-lbt_research/build/utils/bench-simulator.cc.2.o", 
     "file": "../utils/bench-simulator.cc"
   }, 
@@ -3686,8 +3691,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/ipv4-flow-classifier.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/flow-monitor/model/ipv4-flow-classifier.cc.1.o", 
-    "file": "../src/flow-monitor/model/ipv4-flow-classifier.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-echo-client.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/applications/model/udp-echo-client.cc.1.o", 
+    "file": "../src/applications/model/udp-echo-client.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -3886,8 +3891,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/nix-vector-routing/examples/nix-simple.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/nix-vector-routing/examples/nix-simple.cc.1.o", 
-    "file": "../src/nix-vector-routing/examples/nix-simple.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-mac-sap.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-mac-sap.cc.1.o", 
+    "file": "../src/lte/model/lte-mac-sap.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -3948,11 +3953,6 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-routing-table-entry.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-routing-table-entry.cc.1.o", 
     "file": "../src/internet/model/ipv4-routing-table-entry.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/flow-monitor.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/flow-monitor/model/flow-monitor.cc.1.o", 
-    "file": "../src/flow-monitor/model/flow-monitor.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4036,8 +4036,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/ipv6/test-ipv6.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/ipv6/test-ipv6.cc.5.o", 
-    "file": "../examples/ipv6/test-ipv6.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -Isrc/propagation -I../src/propagation -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/propagation/model/propagation-delay-model.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/propagation/model/propagation-delay-model.cc.1.o", 
+    "file": "../src/propagation/model/propagation-delay-model.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4056,8 +4056,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/wimax -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/wimax/test\"' ../src/wimax/test/qos-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/test/qos-test.cc.3.o", 
-    "file": "../src/wimax/test/qos-test.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/traffic-control/model/codel-queue-disc.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/traffic-control/model/codel-queue-disc.cc.1.o", 
+    "file": "../src/traffic-control/model/codel-queue-disc.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4106,8 +4106,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lr-wpan -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lr-wpan/test\"' ../src/lr-wpan/test/lr-wpan-ed-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lr-wpan/test/lr-wpan-ed-test.cc.3.o", 
-    "file": "../src/lr-wpan/test/lr-wpan-ed-test.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-ue-power-control.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-ue-power-control.cc.1.o", 
+    "file": "../src/lte/model/lte-ue-power-control.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4136,18 +4136,13 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-handover-algorithm.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-handover-algorithm.cc.1.o", 
-    "file": "../src/lte/model/lte-handover-algorithm.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/udp-client-server/udp-client-server.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/udp-client-server/udp-client-server.cc.1.o", 
     "file": "../examples/udp-client-server/udp-client-server.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/qos-utils.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/model/qos-utils.cc.1.o", 
-    "file": "../src/wifi/model/qos-utils.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
+    "file": "../src/lte/model/lte-enb-phy-sap.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4181,18 +4176,13 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/stats/wifi-example-sim.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/stats/wifi-example-sim.cc.1.o", 
-    "file": "../examples/stats/wifi-example-sim.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/lte-test-link-adaptation.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/lte-test-link-adaptation.cc.3.o", 
+    "file": "../src/lte/test/lte-test-link-adaptation.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/wifi -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/wifi/test\"' ../src/wifi/test/tx-duration-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/test/tx-duration-test.cc.3.o", 
     "file": "../src/wifi/test/tx-duration-test.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/crc32.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/utils/crc32.cc.1.o", 
-    "file": "../src/network/utils/crc32.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4456,11 +4446,6 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-list-routing.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-list-routing.cc.1.o", 
-    "file": "../src/internet/model/ipv4-list-routing.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/address.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/model/address.cc.1.o", 
     "file": "../src/network/model/address.cc"
   }, 
@@ -4501,13 +4486,13 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-mac-sap.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-mac-sap.cc.1.o", 
-    "file": "../src/lte/model/lte-mac-sap.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/nix-vector-routing/examples/nix-simple.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/nix-vector-routing/examples/nix-simple.cc.1.o", 
+    "file": "../src/nix-vector-routing/examples/nix-simple.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/tcp-option-rfc793.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/tcp-option-rfc793.cc.1.o", 
-    "file": "../src/internet/model/tcp-option-rfc793.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/make-event.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/make-event.cc.1.o", 
+    "file": "../src/core/model/make-event.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4521,8 +4506,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-echo-client.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/applications/model/udp-echo-client.cc.1.o", 
-    "file": "../src/applications/model/udp-echo-client.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-list-routing.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-list-routing.cc.1.o", 
+    "file": "../src/internet/model/ipv4-list-routing.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4573,11 +4558,6 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/inet-socket-address.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/utils/inet-socket-address.cc.1.o", 
     "file": "../src/network/utils/inet-socket-address.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/default-simulator-impl.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/default-simulator-impl.cc.1.o", 
-    "file": "../src/core/model/default-simulator-impl.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4686,8 +4666,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/bridge/examples/csma-bridge.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/bridge/examples/csma-bridge.cc.1.o", 
-    "file": "../src/bridge/examples/csma-bridge.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../scratch/scratch-simulator.cc -c -o /home/sovietreborn/ns3-lbt_research/build/scratch/scratch-simulator.cc.1.o", 
+    "file": "../scratch/scratch-simulator.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4698,6 +4678,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/scheduler.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/scheduler.cc.1.o", 
     "file": "../src/core/model/scheduler.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/type-id.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/type-id.cc.1.o", 
+    "file": "../src/core/model/type-id.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4841,8 +4826,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/main-random-variable.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/examples/main-random-variable.cc.4.o", 
-    "file": "../src/core/examples/main-random-variable.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/default-simulator-impl.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/default-simulator-impl.cc.1.o", 
+    "file": "../src/core/model/default-simulator-impl.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -4991,11 +4976,6 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/buildings -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/buildings/test\"' ../src/buildings/test/building-position-allocator-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/buildings/test/building-position-allocator-test.cc.3.o", 
-    "file": "../src/buildings/test/building-position-allocator-test.cc"
-  }, 
-  {
-    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/wifi-mac-trailer.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/model/wifi-mac-trailer.cc.1.o", 
     "file": "../src/wifi/model/wifi-mac-trailer.cc"
   }, 
@@ -5051,8 +5031,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/type-id.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/type-id.cc.1.o", 
-    "file": "../src/core/model/type-id.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lr-wpan -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lr-wpan/test\"' ../src/lr-wpan/test/lr-wpan-ed-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lr-wpan/test/lr-wpan-ed-test.cc.3.o", 
+    "file": "../src/lr-wpan/test/lr-wpan-ed-test.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5068,6 +5048,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/examples/wimax-ipv4.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/examples/wimax-ipv4.cc.1.o", 
     "file": "../src/wimax/examples/wimax-ipv4.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/ipv4-flow-classifier.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/flow-monitor/model/ipv4-flow-classifier.cc.1.o", 
+    "file": "../src/flow-monitor/model/ipv4-flow-classifier.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5116,8 +5101,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-static-routing.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-static-routing.cc.1.o", 
-    "file": "../src/internet/model/ipv4-static-routing.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-interface-address.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-interface-address.cc.1.o", 
+    "file": "../src/internet/model/ipv4-interface-address.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5201,6 +5186,11 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/helper/udp-echo-helper.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/applications/helper/udp-echo-helper.cc.1.o", 
+    "file": "../src/applications/helper/udp-echo-helper.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/mobility -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/mobility/test\"' ../src/mobility/test/mobility-trace-test-suite.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mobility/test/mobility-trace-test-suite.cc.3.o", 
     "file": "../src/mobility/test/mobility-trace-test-suite.cc"
   }, 
@@ -5271,8 +5261,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/laa-wifi-coexistence -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/laa-wifi-coexistence/test\"' ../src/laa-wifi-coexistence/test/test-lte-interference-abs.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/laa-wifi-coexistence/test/test-lte-interference-abs.cc.3.o", 
-    "file": "../src/laa-wifi-coexistence/test/test-lte-interference-abs.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mesh/model/dot11s/ie-dot11s-configuration.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mesh/model/dot11s/ie-dot11s-configuration.cc.1.o", 
+    "file": "../src/mesh/model/dot11s/ie-dot11s-configuration.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5431,8 +5421,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -Isrc/propagation -I../src/propagation -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/propagation/model/propagation-delay-model.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/propagation/model/propagation-delay-model.cc.1.o", 
-    "file": "../src/propagation/model/propagation-delay-model.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/ipv6/test-ipv6.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/ipv6/test-ipv6.cc.5.o", 
+    "file": "../examples/ipv6/test-ipv6.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5473,6 +5463,11 @@
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
     "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-raw-socket-factory.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/ipv4-raw-socket-factory.cc.1.o", 
     "file": "../src/internet/model/ipv4-raw-socket-factory.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/laa-wifi-coexistence -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/laa-wifi-coexistence/test\"' ../src/laa-wifi-coexistence/test/test-lte-unlicensed-interference.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/laa-wifi-coexistence/test/test-lte-unlicensed-interference.cc.3.o", 
+    "file": "../src/laa-wifi-coexistence/test/test-lte-unlicensed-interference.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5521,8 +5516,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/ss-link-manager.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/model/ss-link-manager.cc.1.o", 
-    "file": "../src/wimax/model/ss-link-manager.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/network/utils/crc32.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/utils/crc32.cc.1.o", 
+    "file": "../src/network/utils/crc32.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5536,8 +5531,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/traffic-control/model/codel-queue-disc.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/traffic-control/model/codel-queue-disc.cc.1.o", 
-    "file": "../src/traffic-control/model/codel-queue-disc.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/wimax -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/wimax/test\"' ../src/wimax/test/qos-test.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/test/qos-test.cc.3.o", 
+    "file": "../src/wimax/test/qos-test.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5581,8 +5576,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mobility/model/waypoint-mobility-model.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mobility/model/waypoint-mobility-model.cc.1.o", 
-    "file": "../src/mobility/model/waypoint-mobility-model.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/wireless/rate-adaptation-distance.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/wireless/rate-adaptation-distance.cc.22.o", 
+    "file": "../examples/wireless/rate-adaptation-distance.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5671,8 +5666,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/laa-wifi-coexistence -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/laa-wifi-coexistence/test\"' ../src/laa-wifi-coexistence/test/test-lte-unlicensed-interference.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/laa-wifi-coexistence/test/test-lte-unlicensed-interference.cc.3.o", 
-    "file": "../src/laa-wifi-coexistence/test/test-lte-unlicensed-interference.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/tcp-option-rfc793.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/internet/model/tcp-option-rfc793.cc.1.o", 
+    "file": "../src/internet/model/tcp-option-rfc793.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -5841,8 +5836,13 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/rraa-wifi-manager.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wifi/model/rraa-wifi-manager.cc.1.o", 
-    "file": "../src/wifi/model/rraa-wifi-manager.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/test-epc-tft-classifier.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/test-epc-tft-classifier.cc.3.o", 
+    "file": "../src/lte/test/test-epc-tft-classifier.cc"
+  }, 
+  {
+    "directory": "/home/sovietreborn/ns3-lbt_research/build", 
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/examples/sample-random-variable-stream.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/examples/sample-random-variable-stream.cc.7.o", 
+    "file": "../src/core/examples/sample-random-variable-stream.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6026,8 +6026,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/network -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/network/test\"' ../src/network/test/ipv6-address-test-suite.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/test/ipv6-address-test-suite.cc.3.o", 
-    "file": "../src/network/test/ipv6-address-test-suite.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/flow-monitor.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/flow-monitor/model/flow-monitor.cc.1.o", 
+    "file": "../src/flow-monitor/model/flow-monitor.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6066,13 +6066,13 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/lte-test-fdmt-ff-mac-scheduler.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/lte-test-fdmt-ff-mac-scheduler.cc.3.o", 
-    "file": "../src/lte/test/lte-test-fdmt-ff-mac-scheduler.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mesh/model/dot11s/peer-link-frame.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mesh/model/dot11s/peer-link-frame.cc.1.o", 
+    "file": "../src/mesh/model/dot11s/peer-link-frame.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/make-event.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/core/model/make-event.cc.1.o", 
-    "file": "../src/core/model/make-event.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-handover-algorithm.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-handover-algorithm.cc.1.o", 
+    "file": "../src/lte/model/lte-handover-algorithm.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6156,8 +6156,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mesh/model/dot11s/ie-dot11s-configuration.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mesh/model/dot11s/ie-dot11s-configuration.cc.1.o", 
-    "file": "../src/mesh/model/dot11s/ie-dot11s-configuration.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/laa-wifi-coexistence -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/laa-wifi-coexistence/test\"' ../src/laa-wifi-coexistence/test/test-lte-interference-abs.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/laa-wifi-coexistence/test/test-lte-interference-abs.cc.3.o", 
+    "file": "../src/laa-wifi-coexistence/test/test-lte-interference-abs.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6231,8 +6231,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/model/vsa-manager.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wave/model/vsa-manager.cc.1.o", 
-    "file": "../src/wave/model/vsa-manager.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../examples/tutorial/hello-simulator.cc -c -o /home/sovietreborn/ns3-lbt_research/build/examples/tutorial/hello-simulator.cc.1.o", 
+    "file": "../examples/tutorial/hello-simulator.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6281,8 +6281,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/mpi/model/null-message-simulator-impl.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/mpi/model/null-message-simulator-impl.cc.1.o", 
-    "file": "../src/mpi/model/null-message-simulator-impl.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/cid-factory.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/model/cid-factory.cc.1.o", 
+    "file": "../src/wimax/model/cid-factory.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6301,8 +6301,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/lte -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/lte/test\"' ../src/lte/test/lte-test-link-adaptation.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/test/lte-test-link-adaptation.cc.3.o", 
-    "file": "../src/lte/test/lte-test-link-adaptation.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/wimax/model/ss-link-manager.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/wimax/model/ss-link-manager.cc.1.o", 
+    "file": "../src/wimax/model/ss-link-manager.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
@@ -6386,8 +6386,8 @@
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 
-    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-vendor-specific-parameters.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/lte/model/lte-vendor-specific-parameters.cc.1.o", 
-    "file": "../src/lte/model/lte-vendor-specific-parameters.cc"
+    "command": "/usr/bin/clang++ -O3 -g -Wall -Werror -I../src/network -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_OPTIMIZED -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 '-DNS_TEST_SOURCEDIR=\"src/network/test\"' ../src/network/test/ipv6-address-test-suite.cc -c -o /home/sovietreborn/ns3-lbt_research/build/src/network/test/ipv6-address-test-suite.cc.3.o", 
+    "file": "../src/network/test/ipv6-address-test-suite.cc"
   }, 
   {
     "directory": "/home/sovietreborn/ns3-lbt_research/build", 

@@ -2187,7 +2187,7 @@ ConfigureFtpClients (NodeContainer client, Ipv4InterfaceContainer servers, Time 
   ApplicationContainer clientApps;
   uint16_t port = 50000;
   uint32_t ftpSegSize = 1448; // bytes
-  uint32_t ftpFileSize = 25120000; // bytes
+  uint32_t ftpFileSize = 12520000; // bytes
   FileTransferHelper ftp ("ns3::UdpSocketFactory", Address ());
   ftp.SetAttribute ("SendSize", UintegerValue (ftpSegSize));
   ftp.SetAttribute ("FileSize", UintegerValue (ftpFileSize));

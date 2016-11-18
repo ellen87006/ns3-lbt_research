@@ -42,17 +42,17 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorA" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="EdThresh=${energyDetection}, FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
+                TITLE=" FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
-    
+            OPERATOR=A
             for cell in Laa   ; do 
                 for rules in  nacks10 nacks80 all any; do 
                 LATENCY_COLUMN=9
                 #echo 'XDD'
                 CURRENT=results/laa_wifi_indoor_${simTag}_cellA_${cell}_rule_${rules}_operatorA
-                `../utils/cdf.sh $LATENCY_COLUMN $CURRENT > results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_${OPERATOR}`
+                `../utils/cdf.sh $LATENCY_COLUMN $CURRENT > results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_A`
             done
             done
 
@@ -63,7 +63,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
                 LATENCY_COLUMN=9
                 #echo 'XDD'
                 CURRENT=results/laa_wifi_indoor_${simTag}_cellA_${cell}_rule_${rules}_operatorA
-                `../utils/cdf.sh $LATENCY_COLUMN $CURRENT > results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_${OPERATOR}`
+                `../utils/cdf.sh $LATENCY_COLUMN $CURRENT > results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_A`
             done
             done
             
@@ -127,7 +127,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorA" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="EdThresh=${energyDetection}, FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
+                TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
@@ -177,7 +177,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             done
             PLOTTYPE="with linespoints"
             XLABEL="Flow number CDF"
-            YLABEL="throughput [mb]"
+            YLABEL="throughput [Mbps]"
             RANGE=$THROUGHPUT_CDF_RANGE
             OPTIONS="$BASE_OPTIONS ; set key bottom right"
             IMGFILENAME="${imgTag}_throughput"
@@ -206,7 +206,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorB" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="EdThresh=${energyDetection}, FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
+                TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
@@ -291,7 +291,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorB" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="EdThresh=${energyDetection}, FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
+                TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
@@ -341,7 +341,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             done
             PLOTTYPE="with linespoints"
             XLABEL="Flow number CDF"
-            YLABEL="throughput [mb]"
+            YLABEL="throughput [Mbps]"
             RANGE=$THROUGHPUT_CDF_RANGE
             OPTIONS="$BASE_OPTIONS ; set key bottom right"
             IMGFILENAME="${imgTag}_throughput"
