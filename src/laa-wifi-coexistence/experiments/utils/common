@@ -24,16 +24,16 @@ print_operator_laa_wifi ()
 {	
     case $rules  in
   	any)
-	    echo "Adaptive rule Operator $opr"	
+	    echo "Scenario 4"	
 	    ;;
   	all)
-	    echo "NACK rule Operator $opr"	
+	    echo "Scenario 5"	
 	    ;;
 	nacks10)
-	    echo "LBT Cat 4 Operator $opr"
+	    echo "Scenario 3"
 	    ;;
    	nacks80)
-	    echo "Fixed LBT Cat 4  Operator $opr"
+	    echo "Scenario 2"
 	    ;;
     esac
 }
@@ -57,7 +57,7 @@ print_operator_wifi_wifi ()
 {	
     case $rules  in
   	nacks10)
-	    echo "Operator $cell"	
+	    echo "Scenario 1 "	
 	    ;;
   	all)
 	    echo "NACK rule operator $OPERATOR"	

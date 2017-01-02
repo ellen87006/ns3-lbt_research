@@ -42,7 +42,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorA" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE=" FtpLambda=${ftpLambda}, CellA=${cell}"
+              #  TITLE=" FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
@@ -127,7 +127,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorA" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
+               # TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
@@ -206,7 +206,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorB" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
+             #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
@@ -291,7 +291,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             imgTag="indoor_"`echo "$energyDetection_${energyDetection}_ftpLambda_${ftpLambda}_operatorB" | tr '.' '_'`
             TRAFFIC=`print_traffic_model Udp`
             #if [ $cell == 'Laa' ] ; then
-                TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
+              #  TITLE="FtpLambda=${ftpLambda}, CellA=${cell}"
            # else
              #   TITLE="FtpLambda=${ftpLambda}, CellA=${cell}, ${TRAFFIC}"
            # fi
