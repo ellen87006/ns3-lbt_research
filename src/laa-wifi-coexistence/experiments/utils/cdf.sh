@@ -9,8 +9,13 @@ col=$1
 
 awk -v col=$1 '{ print $col }' $2 | sort -n | awk '
 {	d[++c] = $0
+            all=$0;
 }
 END {	inc = 1 / c
 	for(i = 0; i <= c; i++)
+    {
 		printf("%.4f\t%.4f\n", d[i], i * inc)
+            all=d[i]+all;
+    }
+        printf("%.4f\n",all/(c+1))
 }'

@@ -1,0 +1,15 @@
+<div class="plot">
+    <a class="thumbnail" href="../png/indoor_ftpLambda_0_8_operatorA_latency.png">
+      <img src="indoor_ftpLambda_0_8_operatorA_latency.png" alt=" FtpLambda=0.8, CellA=Wifi  Latency [ms] Flow number CDF " width="200" height="150" />
+    </a>
+    <div class="resource">
+     eps: 
+    <a  href="../ps/indoor_ftpLambda_0_8_operatorA_latency.eps">image</a>
+    <a  href="../scripts/indoor_ftpLambda_0_8_operatorA_latency_eps.gnuplot">gnuplot script</a>
+    </div>
+    <div class="resource">
+     pstex: 
+    <a href="../pstex/indoor_ftpLambda_0_8_operatorA_latency.ps">ps part</a>
+    <a href="../pstex/indoor_ftpLambda_0_8_operatorA_latency.tex">tex part</a>
+    </div>
+</div>

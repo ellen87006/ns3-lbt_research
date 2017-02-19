@@ -35,6 +35,9 @@ print_operator_laa_wifi ()
    	nacks80)
 	    echo "Scenario 2"
 	    ;;
+            all_fair)
+            echo "Scenario 6"   
+             ;;
     esac
 }
 

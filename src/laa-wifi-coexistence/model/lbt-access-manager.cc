@@ -152,11 +152,11 @@ LbtAccessManager::GetTypeId (void)
                    MakeTimeAccessor (&LbtAccessManager::m_slotTime),
                    MakeTimeChecker ())
     .AddAttribute ("DeferTime", "TimeInterval to defer during CCA",
-                   TimeValue (MicroSeconds (34)),
+                   TimeValue (MicroSeconds (43)),
                    MakeTimeAccessor (&LbtAccessManager::m_deferTime),
                    MakeTimeChecker ())
     .AddAttribute ("MinCw", "The minimum value of the contention window.",
-                   UintegerValue (16),
+                   UintegerValue (15),
                    MakeUintegerAccessor (&LbtAccessManager::m_cwMin),
                    MakeUintegerChecker<uint32_t> ())
     .AddAttribute ("MaxCw", "The maximum value of the contention window. For the priority class 3 this value is set to 63, and for priority class 4 it is 1023.",
