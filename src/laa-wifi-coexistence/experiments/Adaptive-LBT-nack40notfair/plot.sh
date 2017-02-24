@@ -48,7 +48,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
            # fi
             OPERATOR=A
             for cell in Laa   ; do 
-                for rules in  nacks10 nacks80 all any all_fair; do 
+                for rules in all_fair all any nacks10 nacks80 ; do 
                 LATENCY_COLUMN=9
                 #echo 'XDD'
                 CURRENT=results/laa_wifi_indoor_${simTag}_cellA_${cell}_rule_${rules}_operatorA
@@ -69,7 +69,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             
             index=0        
                 for cell in  Laa ; do 
-                for rules in all any nacks10 nacks80 all_fair; do 
+                for rules in all_fair all any nacks10 nacks80 ; do 
                 FILES[$index]=results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_A
                 YCOLS[$index]='($1)'    
                 XCOLS[$index]='($2)'
@@ -133,7 +133,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
            # fi
     
             for cell in Laa   ; do 
-                for rules in  nacks10 nacks80 all any all_fair; do 
+                for rules in all_fair all any nacks10 nacks80 ; do  
                 LATENCY_COLUMN=8
                 #echo 'XDD'
                 CURRENT=results/laa_wifi_indoor_${simTag}_cellA_${cell}_rule_${rules}_operatorA
@@ -154,7 +154,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             
             index=0        
                 for cell in  Laa ; do 
-                for rules in all any nacks10 nacks80 all_fair; do 
+                for rules in all_fair all any nacks10 nacks80 ; do  
                 FILES[$index]=results/cdf_throughput_${simTag}_cellA_${cell}_rule_${rules}_A
                 YCOLS[$index]='($1)'    
                 XCOLS[$index]='($2)'
@@ -212,7 +212,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
            # fi
     
             for cell in Laa   ; do 
-                for rules in  nacks10 nacks80 all any all_fair; do 
+                for rules in all_fair all any nacks10 nacks80 ; do  
                 LATENCY_COLUMN=9
                 #echo 'XDD'
                 CURRENT=results/laa_wifi_indoor_${simTag}_cellA_${cell}_rule_${rules}_operatorB
@@ -233,7 +233,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             opr=Wifi
             index=0        
                 for cell in  Laa ; do 
-                for rules in all any nacks10 nacks80 all_fair; do 
+                for rules in all_fair all any nacks10 nacks80 ; do 
                 FILES[$index]=results/cdf_latency_${simTag}_cellA_${cell}_rule_${rules}_B
                 YCOLS[$index]='($1)'    
                 XCOLS[$index]='($2)'
@@ -297,7 +297,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
            # fi
     
             for cell in Laa   ; do 
-                for rules in  nacks10 nacks80 all any all_fair; do 
+              for rules in all_fair all any nacks10 nacks80 ; do 
                 LATENCY_COLUMN=8
                 #echo 'XDD'
                 CURRENT=results/laa_wifi_indoor_${simTag}_cellA_${cell}_rule_${rules}_operatorB
@@ -318,7 +318,7 @@ for ftpLambda in 0.35 0.5 0.65 0.8 0.95 ;do
             
             index=0        
                 for cell in  Laa ; do 
-                for rules in all any nacks10 nacks80 all_fair; do 
+               for rules in all_fair all any nacks10 nacks80 ; do 
                 FILES[$index]=results/cdf_throughput_${simTag}_cellA_${cell}_rule_${rules}_B
                 YCOLS[$index]='($1)'    
                 XCOLS[$index]='($2)'
