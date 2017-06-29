@@ -24,19 +24,19 @@ print_operator_laa_wifi ()
 {	
     case $rules  in
   	any)
-	    echo "Scenario 4"	
+	    echo "OFSL"	
 	    ;;
   	all)
-	    echo "Scenario 5"	
+	    echo "DLA(no fairness)"	
 	    ;;
 	nacks10)
-	    echo "Scenario 3"
+	    echo "OLBT(random CW)"
 	    ;;
    	nacks80)
-	    echo "Scenario 2"
+	    echo "OLBT(fixed CW)"
 	    ;;
             all_fair)
-            echo "Scenario 6"   
+            echo "DLA"   
              ;;
     esac
 }
@@ -60,7 +60,7 @@ print_operator_wifi_wifi ()
 {	
     case $rules  in
   	nacks10)
-	    echo "Scenario 1 "	
+	    echo "Wi-Fi only "	
 	    ;;
   	all)
 	    echo "NACK rule operator $OPERATOR"	
